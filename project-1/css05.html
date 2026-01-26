@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ibby's Bistro — Lunch Menu</title>
+  <style>
+    /* Blues + greens palette + staff line moved into the header meta area */
+
+    body{
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      line-height: 1.75;
+      letter-spacing: 0.2px;
+      margin: 0;
+      padding: 26px;
+      background: #f5fbff; /* very light blue */
+      color: #0f172a;
+      text-align: center;
+    }
+
+    .wrap{
+      width: 900px;
+      margin: 0 auto;
+    }
+
+    h1{
+      margin: 0 0 6px 0;
+      font-size: 46px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #083344; /* deep teal */
+    }
+
+    /* header meta block */
+    .meta-box{
+      border: 2px solid #0ea5a4; /* teal */
+      background: #ecfeff;       /* pale teal */
+      padding: 12px 16px;
+      margin: 0 0 18px 0;
+      text-align: left;
+    }
+
+    .meta-line{
+      margin: 6px 0;
+      font-size: 15px;
+      color: #0f172a;
+      line-height: 1.5;
+    }
+
+    .meta-label{
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #0f766e; /* teal-green */
+    }
+
+    .story{
+      border: 2px solid #083344;
+      padding: 16px 18px;
+      margin: 0 0 18px 0;
+      background: #ffffff;
+      text-align: left;
+    }
+
+    /* Cards */
+    .card{
+      border: 2px solid #a7f3d0; /* mint */
+      padding: 16px 18px;
+      margin: 14px 0;
+      background: #ffffff;
+      text-align: left;
+    }
+
+    h2{
+      margin: 0 0 10px 0;
+      font-size: 20px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #0f766e; /* teal */
+    }
+
+    h3{
+      margin: 14px 0 6px 0;
+      font-size: 16px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #1d4ed8; /* blue */
+    }
+
+    p{
+      margin: 8px 0;
+    }
+
+    .item{
+      border-left: 6px solid #22c55e; /* green */
+      padding-left: 12px;
+      margin: 10px 0;
+    }
+
+    .name{
+      font-weight: 800;
+      color: #083344;
+    }
+
+    .desc{
+      font-style: italic;
+      font-size: 15px;
+      color: #334155;
+    }
+
+    .price{
+      font-weight: 900;
+      letter-spacing: 0.6px;
+      color: #1d4ed8; /* blue */
+    }
+
+    .rule{
+      font-style: italic;
+      font-size: 15px;
+      color: #0f172a;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <h1>Ibby's Bistro</h1>
+
+    <!-- Hours + Staff together -->
+    <div class="meta-box">
+      <p class="meta-line"><span class="meta-label">Location:</span> Danforth University Center (WashU)</p>
+      <p class="meta-line"><span class="meta-label">Hours:</span> Lunch Mon–Fri 11–3</p>
+      <p class="meta-line"><span class="meta-label">Today’s Staff:</span> Brenda & Josh</p>
+    </div>
+
+    <!-- Origin story kept -->
+    <div class="story">
+      <h2>About Ibby's</h2>
+      <p>
+        Ibby’s Bistro celebrates fresh, creative cuisine inspired by local ingredients and seasonal flavors.
+        Named for <em>Elizabeth “Ibby” Danforth</em>, former first lady of WashU, the bistro honors her legacy
+        of care for students and community. Each dish reflects a commitment to sustainability, local partnerships,
+        and culinary excellence—making Ibby’s more than a restaurant, but a true part of the WashU experience.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Soups</h2>
+
+      <div class="item">
+        <div class="name">Tomato Bisque <span class="price">$4.99</span></div>
+        <div class="desc">Heirloom tomatoes, vegetable stock, fresh basil, croutons</div>
+      </div>
+
+      <div class="item">
+        <div class="name">Soup Du Jour <span class="price">$5.99</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Salads</h2>
+
+      <div class="item">
+        <div class="name">Ibby's Beets Salad <span class="price">$7.99</span></div>
+        <div class="desc">Green blend, balsamic dressing, berries, roasted beets, red onion, orange segments, goat cheese, focaccia toast</div>
+      </div>
+
+      <div class="item">
+        <div class="name">Garden Salad <span class="price">$9.99</span></div>
+        <div class="desc">Romaine + iceberg mix, cucumbers, tomatoes, carrots, croutons, your choice of dressing</div>
+      </div>
+
+      <div class="item">
+        <div class="name">Kale Caesar Salad <span class="price">$9.99</span></div>
+        <div class="desc">Kale + romaine, caesar dressing, parmesan crisp, croutons, shaved parmesan</div>
+      </div>
+
+      <div class="item">
+        <div class="name">Greek Salad <span class="price">$9.99</span></div>
+        <div class="desc">Green blend, lemon vinaigrette, tomatoes, red onion, pepperoncini, kalamata, cucumber, feta</div>
+      </div>
+
+      <div class="item">
+        <div class="name">Burrata Caprese Salad <span class="price">$9.99</span></div>
+        <div class="desc">Imported burrata, heirloom tomatoes, mesclun greens, lemon vinaigrette, pickled onion, balsamic glaze, Maldon salt, basil oil, micro basil (served w/ crostini)</div>
+      </div>
+
+      <h3>Add-On's</h3>
+      <p class="rule">Grilled Chicken $4.99 · Grilled Shrimp Skewer (6) $5.99 · Falafel Balls (4) $3.99</p>
+    </div>
+
+    <div class="card">
+      <h2>Sandwiches</h2>
+      <p class="rule">Served with hand cut fries or sweet potato fries · Side salad or vegetable du jour + $1.49</p>
+
+      <div class="item">
+        <div class="name">Quattro Formaggio Panini <span class="price">$10.99</span></div>
+        <div class="desc">Multigrain bread, boursin, provolone, gruyere, sharp cheddar, griddled a la plancha (add bacon/tomato)</div>
+      </div>
+
+      <div class="item">
+        <div class="name">Smoked Turkey Club <span class="price">$12.99</span></div>
+        <div class="desc">Croissant, garlic aioli, smoked turkey, thick cut bacon, havarti, avocado, tomato, lettuce</div>
+      </div>
+
+      <div class="item">
+        <div class="name">Falafel Shawarma <span class="price">$13.99</span></div>
+        <div class="desc">Traditional falafel wrap, hummus, tzatziki, pickled onion, sliced tomato, lettuce, shredded carrot</div>
+      </div>
+
+      <div class="item">
+        <div class="name">Ibby’s House Burger <span class="price">$13.99</span></div>
+        <div class="desc">8 oz beef patty, lettuce, tomato, onion, kosher pickle, brioche, American cheese (add bacon $1.29)</div>
+      </div>
+
+      <div class="item">
+        <div class="name">Italian Beef Sandwich <span class="price">$12.99</span></div>
+        <div class="desc">Thin sliced seasoned roast beef, au jus, giardiniera</div>
+      </div>
+
+      <div class="item">
+        <div class="name">Impossible Burger <span class="price">$13.99</span></div>
+        <div class="desc">Plant-based burger patty, lettuce, tomato, onion, pickles, chipotle aioli, brioche, choice of cheese</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Desserts</h2>
+
+      <div class="item">
+        <div class="name">Baked All-Nighter <span class="price">$8.49</span></div>
+        <div class="desc">Chocolate chip cookie, ice cream, rum caramel sauce</div>
+      </div>
+
+      <div class="item">
+        <div class="name">Strawberry Shortcake <span class="price">$8.99</span></div>
+        <div class="desc">Macerated strawberries, whipped cream</div>
+      </div>
+
+      <div class="item">
+        <div class="name">Banana Foster <span class="price">$8.99</span></div>
+        <div class="desc">Caramelized banana, rum sauce, ice cream</div>
+      </div>
+
+      <div class="item">
+        <div class="name">Hank's New York Style Cheesecake <span class="price">$9.99</span></div>
+        <div class="desc">Fresh berry compote</div>
+      </div>
+
+      <div class="item">
+        <div class="name">Flourless Chocolate Cake <span class="price">$7.99</span></div>
+        <div class="desc">Bourbon crème, wild berries</div>
+      </div>
+
+      <div class="item">
+        <div class="name">Bold Spoon Ice Cream (12oz) <span class="price">$4.49</span></div>
+        <div class="desc">Rotating flavors</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Drinks</h2>
+
+      <div class="item">
+        <div class="name">Soft Drinks <span class="price">$2.99</span></div>
+        <div class="desc">Fountain soda & assorted Coke products</div>
+      </div>
+
+      <div class="item">
+        <div class="name">Assorted Hot Teas <span class="price">$2.99</span></div>
+        <div class="desc">Green, Earl Grey, black & lemon tea (add lemon, honey)</div>
+      </div>
+
+      <div class="item">
+        <div class="name">Regular Coffee <span class="price">$3.19</span></div>
+        <div class="desc">8oz Kaldi’s dark roast (cream, assorted sugars)</div>
+      </div>
+
+      <div class="item">
+        <div class="name">Hot Chocolate <span class="price">$3.09</span></div>
+        <div class="desc">8oz hot chocolate (add mini marshmallows)</div>
+      </div>
+
+      <div class="item">
+        <div class="name">Iced Coffee <span class="price">$3.19</span></div>
+        <div class="desc">16oz Kaldi’s dark roast over ice with half & half (add whipped crème)</div>
+      </div>
+
+      <div class="item">
+        <div class="name">Fitz Root Beer <span class="price">$2.99</span></div>
+        <div class="desc">12oz bottled (add ice cream 2.99)</div>
+      </div>
+
+      <div class="item">
+        <div class="name">Ibby’s Temple <span class="price">$3.99</span></div>
+        <div class="desc">Ginger ale, lemon-lime soda, lemonade, cherry syrup (cherry garnish)</div>
+      </div>
+
+      <div class="item">
+        <div class="name">Cider Mule <span class="price">$4.29</span></div>
+        <div class="desc">Apple cider, ginger, lemon peel, honey, club soda (apple garnish)</div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
