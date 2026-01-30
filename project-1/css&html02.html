@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ibby's Bistro — Grid Dashboard</title>
+  <style>
+    body{margin:0; padding:24px; font-family:Georgia, "Times New Roman", serif; background:#f5fbff; color:#083344; line-height:1.7;}
+    .wrap{max-width:1100px; margin:0 auto;}
+    h1{margin:0 0 8px 0; text-transform:uppercase; letter-spacing:1px;}
+    .meta{border:2px solid #0ea5a4; background:#ecfeff; padding:12px 16px; margin:0 0 16px 0;}
+    .story{border:2px solid #083344; background:#fff; padding:14px 16px; margin:0 0 18px 0;}
+    h2{margin:0 0 10px 0; color:#0f766e; text-transform:uppercase; letter-spacing:1.5px;}
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:16px;
+    }
+    .panel{
+      border:2px solid #a7f3d0;
+      background:#fff;
+      padding:14px 16px;
+    }
+    .item{margin:10px 0; padding-left:10px; border-left:6px solid #22c55e;}
+    .name{font-weight:800;}
+    .price{font-weight:900; color:#1d4ed8;}
+    .desc{font-style:italic; color:#334155; font-size:15px;}
+    .rule{font-style:italic; color:#0f172a; font-size:15px;}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Ibby's Bistro</h1>
+  <div class="meta">
+    <p><b>Location:</b> Danforth University Center (WashU)</p>
+    <p><b>Hours:</b> Lunch Mon–Fri 11–3 · <b>Today’s Staff:</b> Brenda & Josh</p>
+  </div>
+  <div class="story">
+    <h2>About Ibby's</h2>
+    <p>
+      Ibby’s Bistro celebrates fresh, creative cuisine inspired by local ingredients and seasonal flavors.
+      Named for <em>Elizabeth “Ibby” Danforth</em>. Sustainability + local partnerships are central to the menu.
+    </p>
+  </div>
+
+  <div class="grid">
+    <div class="panel">
+      <h2>Soups</h2>
+      <div class="item"><div class="name">Tomato Bisque <span class="price">$4.99</span></div><div class="desc">Heirloom tomatoes, vegetable stock, basil, croutons</div></div>
+      <div class="item"><div class="name">Soup Du Jour <span class="price">$5.99</span></div></div>
+    </div>
+
+    <div class="panel">
+      <h2>Salads</h2>
+      <div class="item"><div class="name">Ibby's Beets <span class="price">$7.99</span></div><div class="desc">Balsamic, berries, roasted beets, goat cheese</div></div>
+      <div class="item"><div class="name">Garden <span class="price">$9.99</span></div><div class="desc">Romaine/iceberg, cucumbers, tomatoes, carrots, croutons</div></div>
+      <div class="item"><div class="name">Kale Caesar <span class="price">$9.99</span></div><div class="desc">Caesar, parmesan crisp, shaved parmesan</div></div>
+      <div class="item"><div class="name">Greek <span class="price">$9.99</span></div><div class="desc">Lemon vinaigrette, feta, kalamata, pepperoncini</div></div>
+      <div class="item"><div class="name">Burrata Caprese <span class="price">$9.99</span></div><div class="desc">Balsamic glaze, Maldon, basil oil (w/ crostini)</div></div>
+      <p class="rule"><b>Add-ons:</b> Chicken $4.99 · Shrimp (6) $5.99 · Falafel (4) $3.99</p>
+    </div>
+
+    <div class="panel">
+      <h2>Sandwiches</h2>
+      <p class="rule">Served with fries or sweet potato fries · Side salad/veg du jour + $1.49</p>
+      <div class="item"><div class="name">Quattro Formaggio <span class="price">$10.99</span></div><div class="desc">Multigrain, 4 cheeses (add bacon/tomato)</div></div>
+      <div class="item"><div class="name">Smoked Turkey Club <span class="price">$12.99</span></div><div class="desc">Croissant, garlic aioli, bacon, havarti, avocado</div></div>
+      <div class="item"><div class="name">Falafel Shawarma <span class="price">$13.99</span></div><div class="desc">Hummus, tzatziki, pickled onion</div></div>
+      <div class="item"><div class="name">House Burger <span class="price">$13.99</span></div><div class="desc">Add bacon $1.29</div></div>
+      <div class="item"><div class="name">Italian Beef <span class="price">$12.99</span></div></div>
+      <div class="item"><div class="name">Impossible Burger <span class="price">$13.99</span></div></div>
+    </div>
+
+    <div class="panel">
+      <h2>Desserts + Drinks</h2>
+      <div class="item"><div class="name">Baked All-Nighter <span class="price">$8.49</span></div></div>
+      <div class="item"><div class="name">Strawberry Shortcake <span class="price">$8.99</span></div></div>
+      <div class="item"><div class="name">Banana Foster <span class="price">$8.99</span></div></div>
+      <div class="item"><div class="name">Hank’s Cheesecake <span class="price">$9.99</span></div></div>
+      <div class="item"><div class="name">Flourless Chocolate Cake <span class="price">$7.99</span></div></div>
+      <div class="item"><div class="name">Bold Spoon Ice Cream <span class="price">$4.49</span></div></div>
+
+      <p class="rule"><b>Drinks:</b> Soft drinks $2.99 · Hot teas $2.99 · Coffee $3.19 · Hot chocolate $3.09 · Iced coffee $3.19 · Fitz $2.99 · Temple $3.99 · Mule $4.29</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
