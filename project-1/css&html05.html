@@ -3,104 +3,306 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ibby's Bistro — Hover Menu</title>
+  <title>Ibby's Bistro — Vintage Poster Menu (Green Palette)</title>
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    body{margin:0; padding:24px; font-family:Arial, Helvetica, sans-serif; background:#f5fbff; color:#083344; line-height:1.6;}
-    .wrap{max-width:900px; margin:0 auto;}
-    h1{margin:0 0 8px 0; text-transform:uppercase; letter-spacing:1px;}
-    .meta{border:2px solid #0ea5a4; background:#ecfeff; padding:12px 16px; margin:0 0 16px 0;}
-    .story{border:2px solid #083344; background:#fff; padding:14px 16px; margin:0 0 18px 0;}
-    h2{margin:0 0 10px 0; color:#0f766e; text-transform:uppercase; letter-spacing:1.5px;}
+    /*
+      Color palette:
+      #5C6249 (Ebony)
+      #848C67 (Reseda green)
+      #9BA186 (Sage)
+      #E1DBCA (Bone)
+      #C5BEA9 (Dun)
+    */
 
-    .card{
-      border:2px solid #a7f3d0;
-      background:#fff;
-      padding:14px 16px;
-      margin:14px 0;
+    body{
+      margin:0;
+      padding:28px;
+      background:#9BA186;                 
+      color:#5C6249;                    
+      font-family:"Libre Baskerville", Georgia, "Times New Roman", serif;
+      line-height:1.75;
     }
 
-    .item{
-      border-left:6px solid #22c55e;
-      padding:10px 10px 10px 12px;
-      margin:10px 0;
-      background:#ffffff;
+    .paper{
+      max-width:860px;
+      margin:0 auto;
+      background:#E1DBCA;                 
+      border:2px solid #5C6249;         
+      padding:26px 26px 18px 26px;
       position:relative;
-      top:0;
-      transition: top 120ms, background 120ms, border 120ms;
-    }
-    .item:hover{
-      top:-2px;
-      background:#ecfeff;
-      border-left:6px solid #1d4ed8;
     }
 
-    .name{font-weight:800;}
-    .price{font-weight:900; color:#1d4ed8;}
-    .desc{font-style:italic; color:#334155; font-size:14px;}
-    .rule{font-style:italic; color:#0f172a; font-size:14px;}
+    .banner{
+      text-align:center;
+      margin:0 0 8px 0;
+      padding:8px 0 0 0;
+    }
+   
+
+    h1{
+      margin:8px 0 4px 0;
+      text-align:center;
+      font-family:"Great Vibes","Brush Script MT","Apple Chancery",cursive;
+      font-size:68px;
+      font-weight:400;
+      color:#5C6249;                  
+      line-height:1;
+    }
+
+    .subline{
+      text-align:center;
+      margin:0 0 14px 0;
+      font-size:12px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      color:#848C67;                     
+    }
+
+    .meta{
+      text-align:center;
+      font-size:12px;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      color:#848C67;                     
+      margin:0 0 14px 0;
+    }
+    .meta b{ color:#5C6249; }             
+
+    .about{
+      text-align:center;
+      max-width:720px;
+      margin:0 auto 18px auto;
+      font-size:14px;
+      color:#5C6249;                      
+    }
+
+    .rule{
+      border:0;
+      border-top:2px solid #5C6249;     
+      width:70%;
+      margin:14px auto 16px auto;
+    }
+
+    h2{
+      text-align:center;
+      margin:18px 0 10px 0;
+      font-size:14px;
+      letter-spacing:4px;
+      text-transform:uppercase;
+      font-weight:700;
+      color:#5C6249;                   
+    }
+
+    
+    .menu{
+      list-style:none;
+      padding:0;
+      margin:0 auto;
+      max-width:760px;
+    }
+
+    .line{
+      display:flex;
+      align-items:baseline;
+      gap:10px;
+      margin:8px 0;
+      font-size:14px;
+    }
+
+    .name{
+      font-weight:700;
+      flex:0 1 auto;
+    }
+
+    .leaders{
+      flex:1 1 auto;
+      border-bottom:1px dotted #848C67;   
+      transform: translateY(-4px);
+      margin:0 6px;
+    }
+
+    .price{
+      flex:0 0 auto;
+      font-weight:700;
+      color:#5C6249;                   
+      letter-spacing:0.4px;
+    }
+
+    .desc{
+      margin:2px 0 0 0;
+      font-style:italic;
+      font-size:13px;
+      color:#848C67;                      
+      text-align:center;
+    }
+
+    .note{
+      text-align:center;
+      font-style:italic;
+      color:#848C67;                    
+      font-size:13px;
+      margin:10px 0 0 0;
+    }
+
+    
+    .cols{
+      max-width:760px;
+      margin:0 auto;
+      display:flex;
+      gap:26px;
+    }
+    .col{ flex:1; }
+
+   
+    .footer{
+      margin-top:18px;
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      gap:12px;
+      font-size:12px;
+      color:#848C67;                      
+      text-transform:uppercase;
+      letter-spacing:1px;
+    }
+
+    .seal{
+      border:2px solid #5C6249;    
+      color:#5C6249;                 
+      background:#C5BEA9;                
+      padding:10px 12px;
+      text-align:center;
+      font-weight:700;
+    }
+
+    /* Hover (from cse 2004) */
+    .menu li:hover{
+      background:#C5BEA9;                 
+      border-radius:10px;
+      padding:4px 6px;
+    }
+
+    @media (max-width: 760px){
+      .cols{ display:block; }
+      .leaders{ display:none; }
+      .line{ justify-content:space-between; }
+    }
   </style>
 </head>
+
 <body>
-<div class="wrap">
-  <h1>Ibby's Bistro</h1>
-  <div class="meta">
-    <p><b>Location:</b> Danforth University Center (WashU)</p>
-    <p><b>Hours:</b> Lunch Mon–Fri 11–3 · <b>Today’s Staff:</b> Brenda & Josh</p>
-  </div>
-  <div class="story">
-    <h2>About Ibby's</h2>
-    <p>Named for <em>Elizabeth “Ibby” Danforth</em>. Fresh, seasonal food with local partnerships.</p>
-  </div>
+  <div class="paper">
 
-  <div class="card">
+    <div class="banner">
+      <!-- IMAGE PLACEHOLDER (maybe i will add later)
+      <img src="butterflies.png" alt="Decorative header">
+      -->
+     
+    </div>
+
+    <h1>Ibby's Bistro</h1>
+    <div class="subline">Danforth University Center · WashU</div>
+
+    <div class="meta">
+      <div><b>Lunch:</b> Mon–Fri 11–3 · <b>Staff:</b> Brenda & Josh</div>
+    </div>
+
+    <div class="about">
+      Ibby’s Bistro celebrates fresh, creative cuisine inspired by local ingredients and seasonal flavors.
+      Named for <em>Elizabeth “Ibby” Danforth</em>, former first lady of WashU, the bistro honors her legacy of care
+      for students and community. Ibby also had a butterfly garden, and this diner is an homage to her love for butterflies.
+    </div>
+
+    <hr class="rule" />
+
     <h2>Soups</h2>
-    <div class="item"><div class="name">Tomato Bisque <span class="price">$4.99</span></div><div class="desc">Heirloom tomatoes, vegetable stock, basil, croutons</div></div>
-    <div class="item"><div class="name">Soup Du Jour <span class="price">$5.99</span></div></div>
-  </div>
+    <ul class="menu">
+      <li class="line"><span class="name">Tomato Bisque</span><span class="leaders"></span><span class="price">$4.99</span></li>
+      <div class="desc">Heirloom tomatoes, vegetable stock, basil, croutons</div>
+      <li class="line"><span class="name">Soup Du Jour</span><span class="leaders"></span><span class="price">$5.99</span></li>
+    </ul>
 
-  <div class="card">
     <h2>Salads</h2>
-    <div class="item"><div class="name">Ibby's Beets Salad <span class="price">$7.99</span></div><div class="desc">Balsamic, berries, roasted beets, goat cheese</div></div>
-    <div class="item"><div class="name">Garden Salad <span class="price">$9.99</span></div><div class="desc">Dressing choice</div></div>
-    <div class="item"><div class="name">Kale Caesar <span class="price">$9.99</span></div></div>
-    <div class="item"><div class="name">Greek <span class="price">$9.99</span></div></div>
-    <div class="item"><div class="name">Burrata Caprese <span class="price">$9.99</span></div><div class="desc">w/ crostini</div></div>
-    <p class="rule">Add-ons: Chicken $4.99 · Shrimp (6) $5.99 · Falafel (4) $3.99</p>
-  </div>
+    <ul class="menu">
+      <li class="line"><span class="name">Ibby's Beets Salad</span><span class="leaders"></span><span class="price">$7.99</span></li>
+      <div class="desc">Green blend, balsamic, berries, roasted beets, orange, goat cheese, focaccia toast</div>
 
-  <div class="card">
+      <li class="line"><span class="name">Garden Salad</span><span class="leaders"></span><span class="price">$9.99</span></li>
+      <div class="desc">Romaine + iceberg, cucumbers, tomatoes, carrots, croutons, dressing choice</div>
+
+      <li class="line"><span class="name">Kale Caesar Salad</span><span class="leaders"></span><span class="price">$9.99</span></li>
+      <div class="desc">Kale + romaine, caesar, parmesan crisp, croutons, shaved parmesan</div>
+
+      <li class="line"><span class="name">Greek Salad</span><span class="leaders"></span><span class="price">$9.99</span></li>
+      <div class="desc">Lemon vinaigrette, tomatoes, red onion, pepperoncini, kalamata, cucumber, feta</div>
+
+      <li class="line"><span class="name">Burrata Caprese Salad</span><span class="leaders"></span><span class="price">$9.99</span></li>
+      <div class="desc">Burrata, heirloom tomatoes, basil oil, balsamic glaze (w/ crostini)</div>
+    </ul>
+
+    <p class="note">Add-ons: Chicken $4.99 · Shrimp (6) $5.99 · Falafel (4) $3.99</p>
+
     <h2>Sandwiches</h2>
-    <p class="rule">Served with fries or sweet potato fries · Side salad/veg du jour + $1.49</p>
-    <div class="item"><div class="name">Quattro Formaggio Panini <span class="price">$10.99</span></div></div>
-    <div class="item"><div class="name">Smoked Turkey Club <span class="price">$12.99</span></div></div>
-    <div class="item"><div class="name">Falafel Shawarma <span class="price">$13.99</span></div></div>
-    <div class="item"><div class="name">Ibby’s House Burger <span class="price">$13.99</span></div><div class="desc">Add bacon $1.29</div></div>
-    <div class="item"><div class="name">Italian Beef <span class="price">$12.99</span></div></div>
-    <div class="item"><div class="name">Impossible Burger <span class="price">$13.99</span></div></div>
-  </div>
+    <p class="note">Served with fries or sweet potato fries · Side salad or veg du jour + $1.49</p>
 
-  <div class="card">
+    <div class="cols">
+      <div class="col">
+        <ul class="menu">
+          <li class="line"><span class="name">Quattro Formaggio Panini</span><span class="leaders"></span><span class="price">$10.99</span></li>
+          <li class="line"><span class="name">Smoked Turkey Club</span><span class="leaders"></span><span class="price">$12.99</span></li>
+          <li class="line"><span class="name">Falafel Shawarma</span><span class="leaders"></span><span class="price">$13.99</span></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul class="menu">
+          <li class="line"><span class="name">Ibby’s House Burger</span><span class="leaders"></span><span class="price">$13.99</span></li>
+          <div class="desc">Add bacon $1.29</div>
+          <li class="line"><span class="name">Italian Beef Sandwich</span><span class="leaders"></span><span class="price">$12.99</span></li>
+          <li class="line"><span class="name">Impossible Burger</span><span class="leaders"></span><span class="price">$13.99</span></li>
+        </ul>
+      </div>
+    </div>
+
     <h2>Desserts</h2>
-    <div class="item"><div class="name">Baked All-Nighter <span class="price">$8.49</span></div></div>
-    <div class="item"><div class="name">Strawberry Shortcake <span class="price">$8.99</span></div></div>
-    <div class="item"><div class="name">Banana Foster <span class="price">$8.99</span></div></div>
-    <div class="item"><div class="name">Hank’s Cheesecake <span class="price">$9.99</span></div></div>
-    <div class="item"><div class="name">Flourless Chocolate Cake <span class="price">$7.99</span></div></div>
-    <div class="item"><div class="name">Bold Spoon Ice Cream <span class="price">$4.49</span></div></div>
-  </div>
+    <div class="cols">
+      <div class="col">
+        <ul class="menu">
+          <li class="line"><span class="name">Baked All-Nighter</span><span class="leaders"></span><span class="price">$8.49</span></li>
+          <li class="line"><span class="name">Strawberry Shortcake</span><span class="leaders"></span><span class="price">$8.99</span></li>
+          <li class="line"><span class="name">Banana Foster</span><span class="leaders"></span><span class="price">$8.99</span></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul class="menu">
+          <li class="line"><span class="name">Hank’s Cheesecake</span><span class="leaders"></span><span class="price">$9.99</span></li>
+          <li class="line"><span class="name">Flourless Chocolate Cake</span><span class="leaders"></span><span class="price">$7.99</span></li>
+          <li class="line"><span class="name">Bold Spoon Ice Cream</span><span class="leaders"></span><span class="price">$4.49</span></li>
+        </ul>
+      </div>
+    </div>
 
-  <div class="card">
     <h2>Drinks</h2>
-    <div class="item"><div class="name">Soft Drinks <span class="price">$2.99</span></div></div>
-    <div class="item"><div class="name">Hot Teas <span class="price">$2.99</span></div></div>
-    <div class="item"><div class="name">Coffee <span class="price">$3.19</span></div></div>
-    <div class="item"><div class="name">Hot Chocolate <span class="price">$3.09</span></div></div>
-    <div class="item"><div class="name">Iced Coffee <span class="price">$3.19</span></div></div>
-    <div class="item"><div class="name">Fitz Root Beer <span class="price">$2.99</span></div><div class="desc">Add ice cream 2.99</div></div>
-    <div class="item"><div class="name">Ibby’s Temple <span class="price">$3.99</span></div></div>
-    <div class="item"><div class="name">Cider Mule <span class="price">$4.29</span></div></div>
-  </div>
+    <ul class="menu">
+      <li class="line"><span class="name">Soft Drinks</span><span class="leaders"></span><span class="price">$2.99</span></li>
+      <li class="line"><span class="name">Assorted Hot Teas</span><span class="leaders"></span><span class="price">$2.99</span></li>
+      <li class="line"><span class="name">Regular Coffee</span><span class="leaders"></span><span class="price">$3.19</span></li>
+      <li class="line"><span class="name">Hot Chocolate</span><span class="leaders"></span><span class="price">$3.09</span></li>
+      <li class="line"><span class="name">Iced Coffee</span><span class="leaders"></span><span class="price">$3.19</span></li>
+      <li class="line"><span class="name">Fitz Root Beer</span><span class="leaders"></span><span class="price">$2.99</span></li>
+      <li class="line"><span class="name">Ibby’s Temple</span><span class="leaders"></span><span class="price">$3.99</span></li>
+      <li class="line"><span class="name">Cider Mule</span><span class="leaders"></span><span class="price">$4.29</span></li>
+    </ul>
 
-</div>
+    <hr class="rule" />
+
+    <div class="footer">
+      <div>Served on campus · WashU</div>
+      <div> Ibby Danforth</div>
+    </div>
+  </div>
 </body>
 </html>
