@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ibby's Bistro — Vintage Poster Menu</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --moss:#405943;
+      --leaf:#60805B;
+      --beige:#A4B28E;
+      --cream:#DBD8CB;
+      --white:#FAF5EF;
+    }
+
+    body{
+      margin:0;
+      padding:28px;
+      background:var(--leaf);
+      color:var(--moss);
+      font-family:"Libre Baskerville", Georgia, "Times New Roman", serif;
+      line-height:1.75;
+    }
+
+    a{
+      color:var(--moss);
+      text-decoration:none;
+      border-bottom:1px dotted rgba(64,89,67,0.6);
+    }
+
+    a:hover{
+      background:rgba(219,216,203,0.75);
+      border-bottom-color:rgba(64,89,67,0.9);
+      border-radius:6px;
+      padding:0 3px;
+    }
+
+    .paper{
+      max-width:860px;
+      margin:0 auto;
+      background:var(--cream);
+      border:2px solid var(--moss);
+      padding:26px 26px 18px 26px;
+      position:relative;
+      box-shadow: 0 6px 18px rgba(64,89,67,0.18);
+    }
+
+    .banner{
+      text-align:center;
+      margin:0 0 6px 0;
+      padding:6px 0 0 0;
+    }
+
+    h1{
+      margin:8px 0 4px 0;
+      text-align:center;
+      font-family:"Great Vibes","Brush Script MT","Apple Chancery",cursive;
+      font-size:75px;
+      font-weight:400;
+      color:var(--moss);
+      line-height:1;
+    }
+
+    .subline{
+      text-align:center;
+      margin:0 0 10px 0;
+      font-size:12px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      color:rgba(64,89,67,0.78);
+    }
+
+    .meta{
+      text-align:center;
+      font-size:12px;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      color:rgba(64,89,67,0.78);
+      margin:0 0 14px 0;
+    }
+
+    .meta b{ color:var(--moss); }
+
+    .mini-nav{
+      text-align:center;
+      margin:0 auto 10px auto;
+      font-size:12px;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      color:rgba(64,89,67,0.8);
+    }
+
+    .mini-nav span{
+      display:inline-block;
+      margin:0 8px;
+      opacity:0.9;
+    }
+
+    .about{
+      text-align:center;
+      max-width:760px;
+      margin:0 auto 12px auto;
+      font-size:14px;
+      color:var(--moss);
+    }
+
+    .rule{
+      border:0;
+      border-top:2px solid var(--moss);
+      width:70%;
+      margin:14px auto 16px auto;
+    }
+
+    h2{
+      text-align:center;
+      margin:18px 0 10px 0;
+      font-size:14px;
+      letter-spacing:4px;
+      text-transform:uppercase;
+      font-weight:700;
+      color:var(--moss);
+    }
+
+    .menu{
+      list-style:none;
+      padding:0;
+      margin:0 auto;
+      max-width:760px;
+    }
+
+    .line{
+      display:flex;
+      align-items:baseline;
+      gap:10px;
+      margin:8px 0;
+      font-size:14px;
+    }
+
+    .name{
+      font-weight:700;
+      flex:0 1 auto;
+    }
+
+    .leaders{
+      flex:1 1 auto;
+      border-bottom:1px dotted rgba(64,89,67,0.55);
+      transform: translateY(-4px);
+      margin:0 6px;
+    }
+
+    .price{
+      flex:0 0 auto;
+      font-weight:700;
+      color:var(--moss);
+      letter-spacing:0.4px;
+    }
+
+    .desc{
+      margin:2px 0 0 0;
+      font-style:italic;
+      font-size:13px;
+      color:rgba(64,89,67,0.75);
+      text-align:center;
+    }
+
+    .note{
+      text-align:center;
+      font-style:italic;
+      color:rgba(64,89,67,0.75);
+      font-size:13px;
+      margin:10px 0 0 0;
+    }
+
+    .cols{
+      max-width:760px;
+      margin:0 auto;
+      display:flex;
+      gap:26px;
+    }
+
+    .col{ flex:1; }
+
+    .facts{
+      max-width:760px;
+      margin:0 auto 8px auto;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+
+    .fact{
+      background:var(--white);
+      border:1px solid var(--moss);
+      border-radius:16px;
+      padding:10px 12px;
+      box-shadow: 0 2px 0 rgba(64,89,67,0.14);
+    }
+
+    .fact-title{
+      font-size:12px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      font-weight:700;
+      color:var(--moss);
+      margin:0 0 4px 0;
+    }
+
+    .fact-text{
+      margin:0;
+      font-size:13px;
+      color:var(--moss);
+      line-height:1.55;
+    }
+
+    .fact-links{
+      margin-top:8px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      font-size:12px;
+      letter-spacing:0.5px;
+      text-transform:uppercase;
+      color:rgba(64,89,67,0.82);
+    }
+
+    .footer{
+      margin-top:18px;
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      gap:12px;
+      font-size:12px;
+      color:rgba(64,89,67,0.78);
+      text-transform:uppercase;
+      letter-spacing:1px;
+    }
+
+    .seal{
+      border:2px solid var(--moss);
+      color:var(--moss);
+      background:var(--white);
+      padding:10px 12px;
+      text-align:center;
+      font-weight:700;
+      border-radius:14px;
+    }
+
+    .menu li:hover{
+      background:rgba(245,245,244,0.7);
+      border-radius:10px;
+      padding:4px 6px;
+    }
+
+    @media (max-width: 760px){
+      .cols{ display:block; }
+      .leaders{ display:none; }
+      .line{ justify-content:space-between; }
+      .facts{ grid-template-columns:1fr; }
+      .mini-nav span{ display:block; margin:6px 0; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="paper">
+    <div class="banner"></div>
+
+    <h1>Ibby's Bistro</h1>
+    <div class="subline">Danforth University Center · WashU</div>
+
+    <div class="meta">
+      <div><b>Lunch:</b> Mon–Fri 11–3 · <b>Staff:</b> Brenda & Josh</div>
+    </div>
+
+    <div class="mini-nav">
+      <span><a href="#menu">Menu</a></span>
+      <span><a href="#ibby">Ibby’s Corner</a></span>
+      <span><a href="#links">Learn More</a></span>
+    </div>
+
+    <!-- About / Intro (FIXED: properly closed div) -->
+    <div class="about">
+      Ibby’s legacy lives across campus in spaces she helped inspire. From gardens and plant science centers to places designed for reflection, learning, and community, this bistro is an homage to her belief in nurturing both people and the world around them.
+    </div>
+
+    <h2 id="ibby">Ibby’s Corner</h2>
+
+    <div class="facts">
+      <div class="fact">
+        <div class="fact-title">Did you know?</div>
+        <p class="fact-text">The Elizabeth Gray Danforth Butterfly Garden was dedicated in October 1996 in her memory.</p>
+        <div class="fact-links">
+          <a href="https://orsel.washu.edu/2024/05/09/elizabeth-gray-danforth-butterfly-garden/" target="_blank" rel="noopener">Butterfly Garden</a>
+        </div>
+      </div>
+
+      <div class="fact">
+        <div class="fact-title">A campus pause spot</div>
+        <p class="fact-text">The garden is open 24/7 and designed for quiet breaks, reflection, and community.</p>
+        <div class="fact-links">
+          <a href="https://alumni.washu.edu/networks/womans-club/ibbys-garden/" target="_blank" rel="noopener">What it’s like</a>
+        </div>
+      </div>
+
+      <div class="fact">
+        <div class="fact-title">WashU first lady</div>
+        <p class="fact-text">Ibby was WashU’s first lady from 1971–1995, remembered for warmth and compassion.</p>
+        <div class="fact-links">
+          <a href="https://source.washu.edu/2005/03/elizabeth-gray-danforth-dies-at-75/" target="_blank" rel="noopener">More about Ibby</a>
+        </div>
+      </div>
+
+      <div class="fact">
+        <div class="fact-title">Legacy in action</div>
+        <p class="fact-text">The Danforth Scholars Program supports students known for leadership, character, and service.</p>
+        <div class="fact-links">
+          <a href="https://admissions.washu.edu/danforth-scholars-program/" target="_blank" rel="noopener">Danforth Scholars</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NEW: Danforth + Purina context block -->
+    <div class="about">
+      The Danforth family played a foundational role in shaping Washington University in St. Louis and the surrounding community. Their legacy extends beyond campus through leadership in education, service, and innovation—including the founding of the Purina company, which helped establish St. Louis as a center for industry and philanthropy.
+    </div>
+
+    <hr class="rule" />
+
+    <!-- Menu anchor (keeps your mini-nav working) -->
+    <div id="menu"></div>
+
+    <h2>Soups</h2>
+    <ul class="menu">
+      <li class="line"><span class="name">Tomato Bisque</span><span class="leaders"></span><span class="price">$4.99</span></li>
+      <div class="desc">Heirloom tomatoes, vegetable stock, basil, croutons</div>
+
+      <li class="line"><span class="name">Soup Du Jour</span><span class="leaders"></span><span class="price">$5.99</span></li>
+      <div class="desc">Ask what’s simmering today — seasonal & chef’s choice</div>
+    </ul>
+
+    <h2>Salads</h2>
+    <ul class="menu">
+      <li class="line"><span class="name">Ibby's Beets Salad</span><span class="leaders"></span><span class="price">$7.99</span></li>
+      <div class="desc">Green blend, balsamic, berries, roasted beets, orange, goat cheese, focaccia toast</div>
+
+      <li class="line"><span class="name">Garden Salad</span><span class="leaders"></span><span class="price">$9.99</span></li>
+      <div class="desc">Romaine + iceberg, cucumbers, tomatoes, carrots, croutons, dressing choice</div>
+
+      <li class="line"><span class="name">Kale Caesar Salad</span><span class="leaders"></span><span class="price">$9.99</span></li>
+      <div class="desc">Kale + romaine, caesar, parmesan crisp, croutons, shaved parmesan</div>
+
+      <li class="line"><span class="name">Greek Salad</span><span class="leaders"></span><span class="price">$9.99</span></li>
+      <div class="desc">Lemon vinaigrette, tomatoes, red onion, pepperoncini, kalamata, cucumber, feta</div>
+
+      <li class="line"><span class="name">Burrata Caprese Salad</span><span class="leaders"></span><span class="price">$9.99</span></li>
+      <div class="desc">Burrata, heirloom tomatoes, basil oil, balsamic glaze (w/ crostini)</div>
+    </ul>
+
+    <p class="note">Add-ons: Chicken $4.99 · Shrimp (6) $5.99 · Falafel (4) $3.99</p>
+
+    <h2>Sandwiches</h2>
+    <p class="note">Served with fries or sweet potato fries · Side salad or veg du jour + $1.49</p>
+
+    <div class="cols">
+      <div class="col">
+        <ul class="menu">
+          <li class="line"><span class="name">Quattro Formaggio Panini</span><span class="leaders"></span><span class="price">$10.99</span></li>
+          <div class="desc">Mozzarella, provolone, fontina, parmesan, tomato, basil pesto, pressed on sourdough</div>
+
+          <li class="line"><span class="name">Smoked Turkey Club</span><span class="leaders"></span><span class="price">$12.99</span></li>
+          <div class="desc">Smoked turkey, bacon, lettuce, tomato, cheddar, herb mayo, toasted wheat</div>
+
+          <li class="line"><span class="name">Falafel Shawarma</span><span class="leaders"></span><span class="price">$13.99</span></li>
+          <div class="desc">Crispy falafel, cucumber-tomato salad, pickled onion, tahini, warm pita</div>
+        </ul>
+      </div>
+
+      <div class="col">
+        <ul class="menu">
+          <li class="line"><span class="name">Ibby’s House Burger</span><span class="leaders"></span><span class="price">$13.99</span></li>
+          <div class="desc">Angus patty, American cheese, lettuce, tomato, onion, diner sauce, brioche · Add bacon $1.29</div>
+
+          <li class="line"><span class="name">Italian Beef Sandwich</span><span class="leaders"></span><span class="price">$12.99</span></li>
+          <div class="desc">Slow-braised beef, au jus, giardiniera, provolone, hoagie roll</div>
+
+          <li class="line"><span class="name">Impossible Burger</span><span class="leaders"></span><span class="price">$13.99</span></li>
+          <div class="desc">Plant-based patty, vegan cheddar, lettuce, tomato, onion, house sauce, brioche</div>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Desserts</h2>
+    <div class="cols">
+      <div class="col">
+        <ul class="menu">
+          <li class="line"><span class="name">Baked All-Nighter</span><span class="leaders"></span><span class="price">$8.49</span></li>
+          <div class="desc">Warm brownie, vanilla scoop, espresso drizzle</div>
+
+          <li class="line"><span class="name">Strawberry Shortcake</span><span class="leaders"></span><span class="price">$8.99</span></li>
+          <div class="desc">Layers of berries, whipped cream, and soft cake</div>
+
+          <li class="line"><span class="name">Banana Foster</span><span class="leaders"></span><span class="price">$8.99</span></li>
+          <div class="desc">Caramelized banana, brown sugar sauce, vanilla scoop</div>
+        </ul>
+      </div>
+
+      <div class="col">
+        <ul class="menu">
+          <li class="line"><span class="name">Hank’s Cheesecake</span><span class="leaders"></span><span class="price">$9.99</span></li>
+          <div class="desc">Classic slice, berry compote on top</div>
+
+          <li class="line"><span class="name">Flourless Chocolate Cake</span><span class="leaders"></span><span class="price">$7.99</span></li>
+          <div class="desc">Rich, fudgy, gluten-free chocolate slice</div>
+
+          <li class="line"><span class="name">Bold Spoon Ice Cream</span><span class="leaders"></span><span class="price">$4.49</span></li>
+          <div class="desc">Local scoop — ask today’s flavor</div>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Drinks</h2>
+    <ul class="menu">
+      <li class="line"><span class="name">Soft Drinks</span><span class="leaders"></span><span class="price">$2.99</span></li>
+      <li class="line"><span class="name">Assorted Hot Teas</span><span class="leaders"></span><span class="price">$2.99</span></li>
+      <li class="line"><span class="name">Regular Coffee</span><span class="leaders"></span><span class="price">$3.19</span></li>
+      <li class="line"><span class="name">Hot Chocolate</span><span class="leaders"></span><span class="price">$3.09</span></li>
+      <li class="line"><span class="name">Iced Coffee</span><span class="leaders"></span><span class="price">$3.19</span></li>
+      <li class="line"><span class="name">Fitz Root Beer</span><span class="leaders"></span><span class="price">$2.99</span></li>
+      <li class="line"><span class="name">Ibby’s Temple</span><span class="leaders"></span><span class="price">$3.99</span></li>
+      <div class="desc">Cherry + vanilla + ginger ale, served over ice</div>
+      <li class="line"><span class="name">Cider Mule</span><span class="leaders"></span><span class="price">$4.29</span></li>
+      <div class="desc">Apple cider, lime, ginger beer, mint</div>
+    </ul>
+
+    <hr class="rule" />
+
+    <h2 id="links">Learn More</h2>
+    <p class="note">
+      <a href="https://source.washu.edu/2005/03/elizabeth-gray-danforth-dies-at-75/" target="_blank" rel="noopener">Elizabeth “Ibby” Danforth</a>
+      ·
+      <a href="https://orsel.washu.edu/2024/05/09/elizabeth-gray-danforth-butterfly-garden/" target="_blank" rel="noopener">Butterfly Garden</a>
+      ·
+      <a href="https://admissions.washu.edu/danforth-scholars-program/" target="_blank" rel="noopener">Danforth Scholars Program</a>
+      ·
+      <a href="https://www.stlmag.com/news/the-danforth-family/" target="_blank" rel="noopener">Danforth Family & Philosophy</a>
+    </p>
+
+    <div class="footer">
+      <div>Served on campus · WashU</div>
+      <div class="seal">Ibby Danforth</div>
+    </div>
+  </div>
+</body>
+</html>
