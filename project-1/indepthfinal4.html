@@ -1,4 +1,4 @@
- <!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -35,6 +35,7 @@
       background:rgba(219,216,203,0.75);
       border-bottom-color:rgba(64,89,67,0.9);
       border-radius:6px;
+      padding:0 3px;
     }
 
     .paper{
@@ -45,6 +46,45 @@
       padding:26px 26px 18px 26px;
       position:relative;
       box-shadow: 0 6px 18px rgba(64,89,67,0.18);
+      overflow:hidden; /* keeps plant inside paper border */
+    }
+
+    /* Put all real content above decoration */
+    .paper > *{
+      position:relative;
+      z-index:2;
+    }
+
+    /* Left plant that grows upward but stays in margin */
+    .paper::before{
+      content:"";
+      position:absolute;
+      z-index:1;
+
+      /* Margin-only zone (never enters text column) */
+      left: 12px;
+      top: 120px;
+      width: 120px;
+
+      /* Growing reveal */
+      height: 0;
+      animation: growPlant 2.2s ease-out forwards;
+
+      overflow: hidden;
+
+      background-repeat:no-repeat;
+      background-position:left bottom;
+      background-size:110px 650px;
+
+      opacity:0.22;
+      pointer-events:none;
+
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='650' viewBox='0 0 120 650'%3E%3Cg fill='none' stroke='%23405943' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M60 640 C56 580 55 520 58 470 C62 410 70 350 66 290 C61 220 48 170 52 110 C56 65 74 35 88 12'/%3E%3Cpath d='M58 520 C32 505 18 478 14 448 C38 452 56 470 68 490'/%3E%3Cpath d='M61 440 C38 430 24 408 20 382 C42 384 58 398 70 418'/%3E%3Cpath d='M64 360 C42 350 30 330 26 308 C46 310 60 322 72 340'/%3E%3Cpath d='M68 290 C50 282 40 266 36 248 C54 248 64 258 76 274'/%3E%3Cpath d='M72 225 C56 220 48 208 44 194 C60 194 70 202 82 214'/%3E%3Cpath d='M78 168 C64 166 56 158 52 146 C66 144 76 150 86 160'/%3E%3Cpath d='M84 118 C72 118 64 112 60 102 C74 100 84 104 92 112'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    @keyframes growPlant{
+      from { height: 0; }
+      to   { height: 680px; }
     }
 
     .banner{
@@ -54,13 +94,13 @@
     }
 
     h1{
-      margin:8px 0 4px 0;
+      margin:18px 0 10px 0;
       text-align:center;
       font-family:"Great Vibes","Brush Script MT","Apple Chancery",cursive;
-      font-size:68px;
+      font-size:74px;     /* slightly larger to stand out */
       font-weight:400;
-      color:var(--moss);
-      line-height:1;
+      color:#3A503D;      /* slightly deeper moss for contrast */
+      line-height:1.05;
     }
 
     .subline{
@@ -250,6 +290,7 @@
     .menu li:hover{
       background:rgba(245,245,244,0.7);
       border-radius:10px;
+      padding:4px 6px;
     }
 
     @media (max-width: 760px){
@@ -258,6 +299,7 @@
       .line{ justify-content:space-between; }
       .facts{ grid-template-columns:1fr; }
       .mini-nav span{ display:block; margin:6px 0; }
+      .paper::before{ display:none; } /* hide plant on small screens */
     }
   </style>
 </head>
@@ -281,6 +323,7 @@
 
     <div class="about">
       Ibby’s legacy lives across campus in spaces she helped inspire. From gardens and plant science centers to places designed for reflection, learning, and community, this bistro is an homage to her belief in nurturing both people and the world around them.
+    </div>
 
     <h2 id="ibby">Ibby’s Corner</h2>
 
@@ -316,6 +359,10 @@
           <a href="https://admissions.washu.edu/danforth-scholars-program/" target="_blank" rel="noopener">Danforth Scholars</a>
         </div>
       </div>
+    </div>
+
+    <div class="about">
+      The Danforth family played a foundational role in shaping Washington University in St. Louis and the surrounding community. Their legacy extends beyond campus through leadership in education, service, and innovation—including the founding of the Purina company, which helped establish St. Louis as a center for industry and philanthropy.
     </div>
 
     <hr class="rule" />
@@ -435,7 +482,7 @@
       ·
       <a href="https://admissions.washu.edu/danforth-scholars-program/" target="_blank" rel="noopener">Danforth Scholars Program</a>
       ·
-      <a href="https://source.washu.edu/2018/10/who-knew-washu-10-10-18/" target="_blank" rel="noopener">Ibby’s Bistro</a>
+      <a href="https://www.nestlepurinahistory.com/danforth-family" target="_blank" rel="noopener">Danforth Family & Founding of Purina</a>
     </p>
 
     <div class="footer">
