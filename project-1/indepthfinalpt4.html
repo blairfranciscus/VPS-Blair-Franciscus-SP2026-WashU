@@ -47,27 +47,27 @@
       padding:26px 26px 18px 26px;
       position:relative;
       box-shadow: 0 6px 18px rgba(64,89,67,0.18);
-      overflow:hidden; /* keeps plant inside paper border */
+      overflow:hidden; 
     }
 
-    /* Put all real content above decoration */
+    
     .paper > *{
       position:relative;
       z-index:2;
     }
 
-    /* Left plant that grows upward but stays in margin */
+   
     .paper::before{
       content:"";
       position:absolute;
       z-index:1;
 
-      /* Margin-only zone (never enters text column) */
+     
       left: 12px;
       top: 120px;
       width: 120px;
 
-      /* Growing reveal */
+      
       height: 0;
       animation: growPlant 2.2s ease-out forwards;
 
@@ -299,7 +299,7 @@
       .line{ justify-content:space-between; }
       .facts{ grid-template-columns:1fr; }
       .mini-nav span{ display:block; margin:6px 0; }
-      .paper::before{ display:none; } /* hide plant on small screens */
+      .paper::before{ display:none; } 
     }
   </style>
 </head>
