@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carnation — The Language of Flowers</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --paper: #efe6d8;
+  --ink: #2b2a28;
+  --muted: #7b746b;
+  --rule: #d9cfbf;
+  --rule-soft: #e8ddcd;
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Inter", sans-serif;
+  line-height: 1.65;
+  padding: 80px 24px 120px;
+
+  /* subtle paper texture */
+  background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+main{
+  max-width: 920px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.plate-number{
+  font-size: 12px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+h1{
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(56px, 7vw, 88px);
+  font-weight: 500;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.02em;
+}
+
+.subtitle{
+  font-size: 14px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 56px;
+}
+
+.divider{
+  width: 120px;
+  height: 1px;
+  background: var(--rule);
+  margin: 0 auto 70px;
+}
+
+.specimen{
+  display: block;
+  margin: 0 auto 54px;
+  max-width: 720px;
+  width: 100%;
+  height: auto;
+}
+
+h2{
+  font-family: "Cormorant Garamond", serif;
+  font-size: 34px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+}
+
+.latin{
+  font-style: italic;
+  font-size: 16px;
+  color: var(--muted);
+  margin: 0 0 34px 0;
+}
+
+
+.label{
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 22px 0;
+}
+
+.label-row{
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 16px;
+  padding: 12px 0;
+  border-top: 1px solid var(--rule-soft);
+}
+
+.label-row:first-child{
+  border-top: none;
+}
+
+.label-key{
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.label-val{
+  color: var(--ink);
+  font-size: 16px;
+}
+
+ul{
+  margin: 0;
+  padding-left: 18px;
+}
+
+li{ margin: 6px 0; }
+
+
+a{
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+}
+a:hover{ border-bottom-color: var(--ink); }
+
+@media (max-width: 560px){
+  .label-row{ grid-template-columns: 1fr; gap: 8px; }
+  .label{ padding: 18px 0; }
+}
+.return-home{
+  margin-top: 80px;
+  text-align: center;
+}
+
+.return-home a{
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  position: relative;
+  transition: color .2s ease;
+}
+
+.return-home a::after{
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: var(--rule);
+  margin: 8px auto 0;
+  transition: width .3s ease;
+}
+
+.return-home a:hover{
+  color: var(--ink);
+}
+
+.return-home a:hover::after{
+  width: 100px;
+}
+</style>
+</head>
+
+<body>
+<main>
+  <div class="plate-number">Plate I</div>
+
+  <h1>The Language of Flowers</h1>
+  <div class="subtitle">Studies in form &amp; positive space</div>
+
+  <div class="divider"></div>
+
+  <img class="specimen" src="carnation.png" alt="Carnation illustration">
+
+  <h2>Carnation</h2>
+  <div class="latin">Dianthus caryophyllus</div>
+
+  <section class="label" aria-label="Carnation details">
+    <div class="label-row">
+      <div class="label-key">Meaning</div>
+      <div class="label-val">
+        <ul>
+          <li>Mother’s eternal love</li>
+          <li>Heartache</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="label-row">
+      <div class="label-key">Origin</div>
+      <div class="label-val">
+        The meaning behind carnations can be traced back to the Crucifixion
+        of Christ; carnations are said to have appeared where the Virgin
+        Mary’s tears fell, leading to their association with heartache and a
+        mother’s eternal love for her son. Additionally, the common name
+        “carnation” may refer to Christ as the incarnation of God as man.
+      </div>
+    </div>
+
+    <div class="label-row">
+      <div class="label-key">Pair with…</div>
+      <div class="label-val">
+        <ul>
+          <li><strong>Mint</strong> or <strong>Snowdrop</strong> to console the loss of a child</li>
+          <li><strong>Heather</strong> for a child going off to college</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <div class="return-home">
+  <a href="../index.html">← Return to Atelier Franciscus</a>
+</div>
+</main>
+</body>
+</html>
