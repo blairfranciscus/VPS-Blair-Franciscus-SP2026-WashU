@@ -1,0 +1,85 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blair's Class Website, Spring 2026 at WashU</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <!-- Background layers (purely visual; doesn’t change content) -->
+  <div class="bg" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true">B</span>
+        <span class="brand-text">Blair</span>
+      </a>
+
+      <!-- Optional “menu icon” vibe (no new links) -->
+      <button class="menu-button" type="button" aria-label="Menu" disabled>
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">Spring 2026 • WashU</p>
+        <h1>Blair's class website!</h1>
+        <p class="lede">Welcome to my class website. Thanks for stopping by!</p>
+
+        <div class="divider" role="separator" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- CONTENT SECTIONS -->
+    <section class="content">
+      <div class="container grid">
+        <section class="card">
+          <h2>Exercises</h2>
+          <ul class="link-list">
+            <li>Profile Card - I was not in class on 1/12/2026</li>
+            <li>My Collection of Things</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Readings</h2>
+          <ul class="link-list">
+            <li><a href="reading1.html">Restaurant Websites</a></li>
+            <li><a href="reading2.html">The New Turing Test</a></li>
+            <li><a href="reading3.html">Cyborg or Rooms?</a></li>
+            <li><a href="reading4.html">Websites as a Shifting House</a></li>
+            <li><a href="reading5.html">Eno Documentary Response</a></li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Projects</h2>
+          <ul class="link-list">
+            <li><a href="project-1/index.html">1. Restaurant or Café Variations</a></li>
+            <li><a href="project-2/index.html">2. Book → Website</a></li>
+            <li><a href="project-3/index.html">3. Standby Mode</a></li>
+          </ul>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Blair Franciscus</p>
+      <p class="muted">Built for class • Simple, clean, and easy to update</p>
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
