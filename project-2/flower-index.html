@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flower Index - The Language of Flowers</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="meta-index-wrap empirical-index">
+    <div class="plate-number">Index</div>
+    <h1>The Language of Flowers</h1>
+    <div class="subtitle">Empirical Botanical Index</div>
+    <div class="divider"></div>
+
+    <nav class="seed-nav" aria-label="Project navigation">
+      <a class="button-link" href="index.html">Home Grid</a>
+      <a class="button-link" href="about.html">About</a>
+      <a class="button-link" href="BookconsiderationsP2.html">Planning Log</a>
+      <a class="button-link" href="../index.html">Atelier Home</a>
+    </nav>
+
+    <section class="index-section" aria-label="Section 1">
+      <h2>Section 1</h2>
+      <p class="about-intro">Flowers Appearing in BOTH Books (Victorian Language of Flowers + Roux)</p>
+      <section class="meta-index" aria-label="Section 1 flower index">
+        <div class="meta-row two-col meta-head">
+          <div>Flower</div>
+          <div>Meaning</div>
+        </div>
+        <div id="section1Rows"></div>
+      </section>
+      <p class="index-total">Total entries in Section 1: <span id="section1Total"></span></p>
+    </section>
+
+    <section class="index-section" aria-label="Section 2">
+      <h2>Section 2</h2>
+      <p class="about-intro">Flowers in the Victorian Language of Flowers NOT Appearing in Roux</p>
+      <section class="meta-index" aria-label="Section 2 flower index">
+        <div class="meta-row two-col meta-head">
+          <div>Flower</div>
+          <div>Meaning</div>
+        </div>
+        <div id="section2Rows"></div>
+      </section>
+      <p class="index-total">Total entries in Section 2: <span id="section2Total"></span></p>
+    </section>
+  </main>
+
+  <script>
+    const section1 = [
+      ["Amaryllis", "Pride"],
+      ["Anemone", "Forsaken"],
+      ["Apple blossom", "Preference"],
+      ["Aster", "Patience"],
+      ["Basil", "Hate"],
+      ["Buttercup", "Ingratitude"],
+      ["Camellia", "My destiny is in your hands"],
+      ["Carnation, pink", "I will never forget you"],
+      ["Carnation, red", "My heart breaks"],
+      ["Carnation, striped", "I cannot be with you"],
+      ["Carnation, white", "Sweet and lovely"],
+      ["Carnation, yellow", "Disdain"],
+      ["Chamomile", "Energy in adversity"],
+      ["Chrysanthemum", "Truth"],
+      ["Clematis", "Poverty"],
+      ["Clover, white", "Think of me"],
+      ["Columbine", "Desertion"],
+      ["Cowslip", "Pensiveness"],
+      ["Daffodil", "New beginnings"],
+      ["Daisy", "Innocence"],
+      ["Dogwood", "Love undiminished by adversity"],
+      ["Edelweiss", "Noble courage"],
+      ["Eucalyptus", "Protection"],
+      ["Fern", "Sincerity"],
+      ["Feverfew", "Warmth"],
+      ["Forget-me-not", "Forget me not"],
+      ["Foxglove", "Insincerity"],
+      ["Freesia", "Lasting friendship"],
+      ["Fuchsia", "Humble love"],
+      ["Gardenia", "Refinement"],
+      ["Geranium, scarlet", "Stupidity"],
+      ["Hawthorn", "Hope"],
+      ["Heather", "Protection"],
+      ["Heliotrope", "Devoted affection"],
+      ["Hibiscus", "Delicate beauty"],
+      ["Holly", "Foresight"],
+      ["Honeysuckle", "Devotion"],
+      ["Hydrangea", "Dispassion"],
+      ["Iris", "Message"],
+      ["Ivy", "Fidelity"],
+      ["Jasmine, white", "Amiability"],
+      ["Lavender", "Mistrust"],
+      ["Lemon", "Zest"],
+      ["Lilac", "First emotions of love"],
+      ["Lily", "Majesty"],
+      ["Magnolia", "Dignity"],
+      ["Marigold", "Grief"],
+      ["Mimosa", "Sensitivity"],
+      ["Mistletoe", "I surmount all obstacles"],
+      ["Monkshood", "Chivalry"],
+      ["Morning glory", "Coquetry"],
+      ["Myrtle", "Love"],
+      ["Narcissus", "Self-love"],
+      ["Nasturtium", "Impetuous love"],
+      ["Nettle", "Cruelty"],
+      ["Oleander", "Beware"],
+      ["Olive", "Peace"],
+      ["Orchid", "Refined beauty"],
+      ["Pansy", "Think of me"],
+      ["Passionflower", "Faith"],
+      ["Peony", "Anger"],
+      ["Peppermint", "Warmth of feeling"],
+      ["Petunia", "Your presence soothes me"],
+      ["Poinsettia", "Be of good cheer"],
+      ["Poppy", "Fantastic extravagance"],
+      ["Primrose", "Childhood"],
+      ["Ranunculus", "You are radiant with charms"],
+      ["Rhododendron", "Beware"],
+      ["Rose, red", "Love"],
+      ["Rosemary", "Remembrance"],
+      ["Snapdragon", "Presumption"],
+      ["Snowdrop", "Consolation and hope"],
+      ["Sunflower", "False riches"],
+      ["Sweet pea", "Delicate pleasures"],
+      ["Tulip", "Declaration of love"]
+    ];
+
+    const section2 = [
+      ["Abutilon", "Meditation"],
+      ["Acacia", "Secret love"],
+      ["Acanthus", "Artifice"],
+      ["Agapanthus", "Love letter"],
+      ["Allium", "Prosperity"],
+      ["Almond blossom", "Indiscretion"],
+      ["Aloe", "Grief"],
+      ["Alstroemeria", "Devotion"],
+      ["Alyssum", "Worth beyond beauty"],
+      ["Amaranth", "Immortality"],
+      ["Angelica", "Inspiration"],
+      ["Apple", "Temptation"],
+      ["Azalea", "Fragile and ephemeral passion"],
+      ["Baby's breath", "Everlasting love"],
+      ["Bachelor's button", "Single blessedness"],
+      ["Bay leaf", "I change but in death"],
+      ["Begonia", "Caution"],
+      ["Bellflower", "Gratitude"],
+      ["Bells of Ireland", "Good luck"],
+      ["Bird of paradise", "Magnificence"],
+      ["Blackberry", "Envy"],
+      ["Black-eyed Susan", "Justice"],
+      ["Bluebell", "Constancy"],
+      ["Bougainvillea", "Passion"],
+      ["Bouvardia", "Enthusiasm"],
+      ["Broom", "Humility"],
+      ["Cabbage", "Profit"],
+      ["Calla lily", "Modesty"],
+      ["Candytuft", "Indifference"],
+      ["Canterbury bells", "Constancy"],
+      ["Celandine", "Joys to come"],
+      ["Cherry blossom", "Impermanence"],
+      ["Chervil", "Sincerity"],
+      ["Chestnut", "Do me justice"],
+      ["Chicory", "Frugality"],
+      ["Cinquefoil", "Beloved daughter"],
+      ["Clove", "I have loved you and you have not known it"],
+      ["Cockscomb", "Affection"],
+      ["Coreopsis", "Always cheerful"],
+      ["Coriander", "Hidden worth"],
+      ["Corn", "Riches"],
+      ["Cosmos", "Joy in love and life"],
+      ["Crab-apple blossom", "Ill-tempered"],
+      ["Cranberry", "Cure for heartache"],
+      ["Crocus", "Youthful gladness"],
+      ["Currant", "Thy frown will kill me"],
+      ["Cyclamen", "Timid hope"],
+      ["Cypress", "Mourning"],
+      ["Dahlia", "Dignity"],
+      ["Daisy, gerber", "Cheerfulness"],
+      ["Dandelion", "Rustic oracle"],
+      ["Daphne", "I would not have you otherwise"],
+      ["Daylily", "Coquetry"],
+      ["Delphinium", "Levity"],
+      ["Dianthus", "Make haste"],
+      ["Dittany", "Childbirth"],
+      ["Dragon plant", "You are near a snare"],
+      ["Elder", "Compassion"],
+      ["Euphorbia", "Persistence"],
+      ["Evening primrose", "Inconstancy"],
+      ["Everlasting pea", "Lasting pleasure"],
+      ["Fennel", "Strength"],
+      ["Fern, maidenhair", "Secrecy"],
+      ["Fig", "Argument"],
+      ["Flax", "I feel your kindness"],
+      ["Forsythia", "Anticipation"],
+      ["Gentian", "Intrinsic worth"],
+      ["Geranium, oak-leaf", "True friendship"],
+      ["Geranium, pencil-leaf", "Ingenuity"],
+      ["Geranium, wild", "Steadfast piety"],
+      ["Ginger", "Strength"],
+      ["Gladiolus", "You pierce my heart"],
+      ["Goldenrod", "Careful encouragement"],
+      ["Grapevine", "Abundance"],
+      ["Grass", "Submission"],
+      ["Hazel", "Reconciliation"],
+      ["Heath", "Solitude"],
+      ["Helenium", "Tears"],
+      ["Hollyhock", "Ambition"],
+      ["Honesty", "Honesty"],
+      ["Hyacinth, blue", "Constancy"],
+      ["Hyacinth, purple", "Please forgive me"],
+      ["Hyacinth, white", "Beauty"],
+      ["Ice plant", "Your looks freeze me"],
+      ["Impatiens", "Impatience"],
+      ["Jacob's ladder", "Come down"],
+      ["Jasmine, Carolina", "Separation"],
+      ["Jasmine, Indian", "Attachment"],
+      ["Jonquil", "Desire"],
+      ["Laburnum", "Pensive beauty"],
+      ["Lantana", "Rigor"],
+      ["Larch", "Audacity"],
+      ["Larkspur", "Lightness"],
+      ["Laurel", "Glory and success"],
+      ["Lemon blossom", "Discretion"],
+      ["Lettuce", "Coldheartedness"],
+      ["Liatris", "I will try again"],
+      ["Lichen", "Dejection"],
+      ["Lily of the valley", "Return of happiness"],
+      ["Linden tree", "Conjugal love"],
+      ["Lisianthus", "Appreciation"],
+      ["Lobelia", "Malevolence"],
+      ["Lotus", "Purity"],
+      ["Love-in-a-mist", "Perplexity"],
+      ["Love-lies-bleeding", "Hopeless but not helpless"],
+      ["Lungwort", "You are my life"],
+      ["Lupine", "Imagination"],
+      ["Marjoram", "Blushes"],
+      ["Marsh marigold", "Desire for riches"],
+      ["Meadow saffron", "My best days are past"],
+      ["Meadowsweet", "Uselessness"],
+      ["Michaelmas daisy", "Farewell"],
+      ["Mignonette", "Your qualities surpass your charms"],
+      ["Mock orange", "Counterfeit"],
+      ["Moss", "Maternal love"],
+      ["Mullein", "Take courage"],
+      ["Mustard", "I am hurt"],
+      ["Orange", "Generosity"],
+      ["Orange blossom", "Your purity equals your loveliness"],
+      ["Oregano", "Joy"],
+      ["Parsley", "Festivity"],
+      ["Peach", "Your charms are unequaled"],
+      ["Peach blossom", "I am your captive"],
+      ["Pear", "Affection"],
+      ["Pear blossom", "Comfort"],
+      ["Periwinkle", "Tender recollections"],
+      ["Persimmon", "Bury me amid nature's beauty"],
+      ["Phlox", "Our souls are united"],
+      ["Pineapple", "You are perfect"],
+      ["Pink", "Pure love"],
+      ["Plum", "Keep your promises"],
+      ["Polyanthus", "Confidence"],
+      ["Pomegranate", "Foolishness"],
+      ["Pomegranate blossom", "Mature elegance"],
+      ["Poplar, black", "Courage"],
+      ["Poplar, white", "Time"],
+      ["Potato", "Benevolence"],
+      ["Potato vine", "You are delicious"],
+      ["Protea", "Courage"],
+      ["Purple coneflower", "Strength and health"],
+      ["Queen Anne's lace", "Fantasy"],
+      ["Quince", "Temptation"],
+      ["Raspberry", "Remorse"],
+      ["Redbud", "Betrayal"],
+      ["Rhubarb", "Advice"],
+      ["Saffron", "Beware of excess"],
+      ["Sage", "Good health and long life"],
+      ["Saint-John's-wort", "Superstition"],
+      ["Saxifraga", "Affection"],
+      ["Scabiosa", "Unfortunate love"],
+      ["Scarlet pimpernel", "Change"],
+      ["Sorrel", "Parental affection"],
+      ["Speedwell", "Fidelity"],
+      ["Spirea", "Victory"],
+      ["Star-of-Bethlehem", "Purity"],
+      ["Starwort", "Welcome"],
+      ["Stephanotis", "Happiness in marriage"],
+      ["Stock", "You will always be beautiful to me"],
+      ["Stonecrop", "Tranquility"],
+      ["Strawberry", "Perfection"],
+      ["Sweet briar", "Simplicity"],
+      ["Sweet William", "Gallantry"],
+      ["Tansy", "I declare war against you"],
+      ["Thistle, common", "Misanthropy"],
+      ["Thrift", "Sympathy"],
+      ["Thyme", "Activity"],
+      ["Trachelium", "Neglected beauty"],
+      ["Trillium", "Modest beauty"],
+      ["Trumpet vine", "Fame"],
+      ["Tuberose", "Dangerous pleasures"],
+      ["Turnip", "Charity"]
+    ];
+
+    function renderSection(rows, mountId) {
+      const mount = document.getElementById(mountId);
+      rows
+        .forEach(([flower, meaning]) => {
+          const row = document.createElement("div");
+          row.className = "meta-row two-col";
+          row.innerHTML = `
+            <div>${flower}</div>
+            <div>${meaning}</div>
+          `;
+          mount.appendChild(row);
+        });
+    }
+
+    renderSection(section1, "section1Rows");
+    renderSection(section2, "section2Rows");
+    document.getElementById("section1Total").textContent = "73";
+    document.getElementById("section2Total").textContent = "105";
+  </script>
+</body>
+</html>
