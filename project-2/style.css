@@ -1,5 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Courier+Prime:wght@400;700&family=Inter:wght@300;400;500&display=swap");
 
+@font-face {
+  font-family: "Audrey";
+  src: url("Audrey/Audrey-Normal.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Audrey";
+  src: url("Audrey/Audrey-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Audrey";
+  src: url("Audrey/Audrey-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bevola";
+  src: url("bevola-font/BevolaDemo-Regular-BF69b9581c161bc.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --paper: #efe6d8;
   --ink: #2b2a28;
@@ -31,11 +63,11 @@ main {
 }
 
 h1 {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Bevola", "Cormorant Garamond", serif;
   font-size: clamp(56px, 7vw, 88px);
   font-weight: 500;
   margin: 0 0 12px;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
   text-align: center;
 }
 
@@ -92,21 +124,15 @@ a {
 
 .seed-nav {
   display: flex;
-  gap: 8px;
+  column-gap: 30px;
+  row-gap: 12px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 30px;
+  margin-bottom: 34px;
 }
 
 .seed-nav .button-link::before {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border: 1px solid var(--muted);
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 8px;
-  vertical-align: middle;
+  content: none;
 }
 
 .featured {
@@ -166,6 +192,42 @@ a {
 .button-link:hover {
   border-color: var(--ink);
   transform: translateY(-1px);
+}
+
+.seed-nav .button-link {
+  position: relative;
+  border: 0;
+  padding: 0 0 6px;
+  font-family: "Audrey", "Cormorant Garamond", serif;
+  font-size: 1.18rem;
+  letter-spacing: 0.22em;
+  line-height: 1.2;
+  background: transparent;
+  color: var(--ink);
+  transition: color 0.2s ease;
+}
+
+.seed-nav .button-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.2s ease;
+}
+
+.seed-nav .button-link:hover {
+  border-color: transparent;
+  transform: none;
+}
+
+.seed-nav .button-link:hover::after,
+.seed-nav .button-link:focus-visible::after {
+  transform: scaleX(1);
 }
 
 .catalog-title {
