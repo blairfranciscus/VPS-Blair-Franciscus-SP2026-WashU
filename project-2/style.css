@@ -679,6 +679,21 @@ a {
   color: var(--ink);
 }
 
+.victoria-definition {
+  margin-top: -14px;
+  margin-bottom: 34px;
+  padding: 14px 18px;
+  border: 1px solid var(--rule-soft);
+  background: rgba(255, 250, 242, 0.7);
+  font-style: italic;
+}
+
+.victoria-definition strong {
+  font-style: normal;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .label {
   max-width: 700px;
   margin: 0 auto;
