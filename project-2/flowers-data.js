@@ -2,7 +2,6 @@ const FLOWERS = [
   { name: "Amaryllis", meaning: "Pride", scientificName: "" },
   { name: "Anemone", meaning: "Forsaken love", scientificName: "" },
   { name: "Apple Blossom", meaning: "Preference", scientificName: "" },
-  { name: "Asphodel", meaning: "My regrets follow you to the grave", scientificName: "" },
   { name: "Aster", meaning: "Daintiness", scientificName: "" },
   { name: "Azalea", meaning: "Fragility; Temperance", scientificName: "" },
   { name: "Baby's Breath", meaning: "Purity; Innocence", scientificName: "" },
