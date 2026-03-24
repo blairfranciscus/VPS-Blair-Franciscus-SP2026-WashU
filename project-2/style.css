@@ -642,6 +642,16 @@ a {
   padding: 16px;
 }
 
+.book-cover {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border: 1px solid var(--rule-soft);
+  margin: 0 0 14px;
+  background: rgba(255, 250, 242, 0.7);
+}
+
 .book-label {
   font-size: 11px;
   letter-spacing: 0.16em;
