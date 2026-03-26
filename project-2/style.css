@@ -226,7 +226,8 @@ a {
 }
 
 .seed-nav .button-link:hover::after,
-.seed-nav .button-link:focus-visible::after {
+.seed-nav .button-link:focus-visible::after,
+.seed-nav .button-link[aria-current="page"]::after {
   transform: scaleX(1);
 }
 
