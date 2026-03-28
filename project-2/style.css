@@ -682,12 +682,21 @@ a {
 
 .detail-title {
   margin-bottom: 8px;
+  font-family: "Courier Prime", "Courier New", monospace;
+  font-size: clamp(18px, 2.1vw, 24px);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: none;
+  line-height: 1.2;
 }
 
 .definition {
   max-width: 700px;
   margin: 0 auto 34px;
   color: var(--ink);
+  font-family: "Courier Prime", "Courier New", monospace;
+  font-size: 15px;
+  line-height: 1.7;
 }
 
 .victoria-definition {
@@ -697,6 +706,7 @@ a {
   border: 1px solid var(--rule-soft);
   background: rgba(255, 250, 242, 0.7);
   font-style: italic;
+  font-family: "Courier Prime", "Courier New", monospace;
 }
 
 .victoria-definition strong {
@@ -727,6 +737,7 @@ a {
 }
 
 .label-key {
+  font-family: "Courier Prime", "Courier New", monospace;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-size: 12px;
@@ -736,6 +747,8 @@ a {
 .label-val {
   color: var(--ink);
   font-size: 16px;
+  font-family: "Courier Prime", "Courier New", monospace;
+  line-height: 1.7;
 }
 
 ul {
