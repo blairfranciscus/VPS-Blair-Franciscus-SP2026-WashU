@@ -53,6 +53,7 @@ body {
   font-family: "Inter", sans-serif;
   line-height: 1.65;
   padding: 80px 24px 120px;
+  overflow-x: hidden;
   background-image: radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.04) 1px, transparent 0);
   background-size: 24px 24px;
 }
@@ -71,9 +72,14 @@ main {
   margin: 0 auto;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 h1 {
   font-family: "Bevola", "Cormorant Garamond", serif;
-  font-size: clamp(34px, 5.8vw, 72px);
+  font-size: clamp(28px, 5.8vw, 72px);
   font-weight: 500;
   margin: 0 0 12px;
   letter-spacing: 0.015em;
@@ -158,6 +164,9 @@ a {
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 34px;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .seed-nav .button-link::before {
@@ -373,6 +382,8 @@ a {
   text-align: center;
   font-family: "Bevola", "Cormorant Garamond", serif;
   font-weight: 400;
+  font-size: 15px;
+  line-height: 1.7;
 }
 
 .landing-shell {
@@ -399,6 +410,7 @@ a {
   overflow: hidden;
   position: relative;
   width: 0;
+  max-width: 100%;
   animation: title-type 3.6s steps(23, end) forwards;
 }
 
@@ -609,6 +621,7 @@ a {
   max-width: 920px;
   margin: 0 auto;
   text-align: center;
+  width: 100%;
 }
 
 .flower-card-plate {
@@ -1055,7 +1068,7 @@ li {
   }
 
   to {
-    width: 28ch;
+    width: 26ch;
   }
 }
 
@@ -1103,6 +1116,20 @@ li {
 }
 
 @media (max-width: 900px) {
+  body {
+    padding: 64px 20px 92px;
+  }
+
+  .seed-nav {
+    column-gap: 20px;
+    row-gap: 10px;
+  }
+
+  .seed-nav .button-link {
+    font-size: 1.02rem;
+    letter-spacing: 0.16em;
+  }
+
   .featured {
     grid-template-columns: 1fr;
   }
@@ -1124,16 +1151,153 @@ li {
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 760px) {
+  h1 {
+    font-size: clamp(24px, 8vw, 46px);
+    letter-spacing: 0.01em;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    margin-bottom: 34px;
+  }
+
+  .divider {
+    width: 92px;
+    margin-bottom: 34px;
+  }
+
+  .seed-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 18px;
+    max-width: 420px;
+    margin-bottom: 28px;
+  }
+
+  .seed-nav .button-link {
+    padding: 6px 0;
+    font-size: 0.96rem;
+    letter-spacing: 0.12em;
+    text-align: center;
+  }
+
+  .home-intro,
+  .about-intro,
+  .catalog-subtitle,
+  .empirical-index .about-intro {
+    max-width: 34ch;
+    margin-bottom: 26px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .landing-shell {
+    min-height: 100svh;
+    transform: translateY(4vh);
+  }
+
   .landing-title {
-    white-space: normal;
-    width: auto;
-    border-right: 0;
-    animation: landing-fade 1.2s ease forwards;
+    font-size: clamp(24px, 8vw, 40px);
   }
 
   .landing-flower {
-    width: min(70vw, 280px);
+    width: min(60vw, 250px);
+  }
+
+  .landing-type-line.meaning-primary {
+    font-size: 13px;
+  }
+
+  .tile-overlay,
+  .arrangement-overlay {
+    opacity: 1;
+    background: linear-gradient(180deg, rgba(37, 35, 32, 0.06) 0%, rgba(37, 35, 32, 0.68) 72%);
+  }
+
+  .flower-tile:hover .tile-image img,
+  .arrangement-link:hover .arrangement-cover {
+    filter: none;
+    transform: none;
+  }
+
+  .tile-name {
+    font-size: 22px;
+  }
+
+  .tile-meaning {
+    font-size: 11px;
+    line-height: 1.45;
+  }
+
+  .meta-head {
+    display: none;
+  }
+
+  .meta-row.two-col {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 14px 0;
+  }
+
+  .meta-row.two-col > div {
+    text-align: left;
+  }
+
+  .meta-row.two-col:not(.meta-head) > div::before {
+    display: block;
+    margin-bottom: 4px;
+    font-family: "Courier Prime", "Courier New", monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .meta-row.two-col:not(.meta-head) > div:first-child::before {
+    content: "Flower";
+  }
+
+  .meta-row.two-col:not(.meta-head) > div:last-child::before {
+    content: "Meaning";
+  }
+
+  .empirical-index .meta-row.two-col > div:first-child,
+  .empirical-index .meta-row.two-col > div:last-child {
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .about-section {
+    padding: 22px 0;
+    margin-bottom: 26px;
+  }
+
+  .book-card h3 {
+    font-size: 26px;
+  }
+
+  .arrangement-card-title {
+    font-size: clamp(25px, 7vw, 34px);
+  }
+
+  .detail-title {
+    font-size: 18px;
+  }
+
+  .definition,
+  .victoria-definition,
+  .about-copy,
+  .book-card p,
+  .label-val {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .label {
+    padding: 18px 0;
   }
 
   .label-row {
@@ -1141,23 +1305,80 @@ li {
     gap: 8px;
   }
 
-  .label {
-    padding: 18px 0;
+  .atelier-footer {
+    margin-top: 96px;
+  }
+}
+
+@media (max-width: 560px) {
+  body {
+    padding: 48px 16px 72px;
+  }
+
+  .seed-nav {
+    grid-template-columns: 1fr;
+    max-width: 280px;
+  }
+
+  .landing-shell {
+    min-height: calc(100svh - 20px);
+    transform: translateY(1.5vh);
+  }
+
+  .landing-title {
+    font-size: clamp(21px, 8vw, 34px);
+  }
+
+  .landing-flower {
+    width: min(58vw, 210px);
+  }
+
+  .landing-type-line.meaning-primary {
+    font-size: 12px;
+  }
+
+  .landing-explore a {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+  }
+
+  .flower-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  .tile-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .arrangement-link {
+    padding: 12px;
+  }
+
+  .arrangement-card-copy,
+  .arrangement-card-note {
+    font-size: 13px;
+  }
+
+  .book-card {
+    padding: 14px;
+  }
+
+  .book-card h3 {
+    font-size: 23px;
+  }
+
+  .flower-media {
+    margin-bottom: 18px;
   }
 
   .meta-row {
     grid-template-columns: 1fr;
     gap: 5px;
   }
+}
 
-  .empirical-index .meta-row.two-col:not(.meta-head) {
-    padding-left: 0;
-  }
-
-  .empirical-index .meta-row.two-col > div:first-child {
-    font-size: 14px;
-  }
-
+@media (max-width: 380px) {
   .tile-grid {
     grid-template-columns: 1fr;
   }
