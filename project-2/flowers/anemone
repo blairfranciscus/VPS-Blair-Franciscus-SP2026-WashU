@@ -3,14 +3,14 @@
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Begonia - The Language of Flowers</title>
+      <title>Anemone - The Language of Flowers</title>
       <link rel="stylesheet" href="../style.css">
     </head>
     <body>
       <main class="detail-layout">
 
         <h1><a class="site-title-link" href="../index.html">The Language of Flowers</a></h1>
-        <div class="subtitle">Begonia</div>
+        <div class="subtitle">Anemone</div>
         <div class="divider"></div>
         <nav class="seed-nav" aria-label="Project navigation">
           <a class="button-link" href="../garden.html" aria-current="page">Garden</a>
@@ -19,34 +19,28 @@
           <a class="button-link" href="../about.html">About</a>
         </nav>
 
-        <img class="specimen" src="../Begonia.png" alt="Begonia illustration">
+        <img class="specimen" src="../Anemone.png" alt="Anemone illustration">
 
-        <h2 class="detail-title">Begonia</h2>
-        <div class="latin">Begonia</div>
-        <p class="definition">
-          Definition: A flower associated in floriography with repaying a favor and offering a warning.
-        </p>
+        <h2 class="detail-title">Anemone</h2>
+        <div class="latin">Anemone</div>
         <p class="definition victoria-definition">
-          <strong>Victoria's Definition:</strong> Caution
+          <strong>Victoria's Definition:</strong> Forsaken
         </p>
 
-        <section class="label" aria-label="Begonia details">
-          <div class="label-row">
-            <div class="label-key">Meaning</div>
+        <section class="label" aria-label="Anemone details">
+          <div class="label-row meaning-row">
+            <div class="label-key"><strong>Meaning</strong></div>
             <div class="label-val">
-          <ul>
-            <li>To repay a favor</li>
-            <li>A warning</li>
-          </ul>
+Forsaken love
             </div>
           </div>
 
           <div class="label-row">
             <div class="label-key">Origin</div>
             <div class="label-val">
-              To repay a favor, Charles Plumier, a seventeenth-century French botanist, named the begonia flower
-              after Michel Begon, a French politician and plant collector. The flower's name, which contains the
-              phrase "be gone," may explain its use as a symbol of warning.
+              The anemone's association with forsaken love can be traced back to Greek mythology. The flower is said
+              to have sprung from Aphrodite's tears as she mourned the loss of her beloved Adonis. He was killed by
+              the jealous gods over his relationship with the goddess of love.
             </div>
           </div>
 
@@ -54,8 +48,8 @@
             <div class="label-key">Pair With</div>
             <div class="label-val">
               <ul>
-                <li><strong>Sweet Pea</strong> as a gift for the host of a party</li>
-                <li><strong>Oleander</strong> to emphasize caution in a new prospect</li>
+                <li><strong>Camellia</strong> to show longing for what could have been</li>
+                <li><strong>Yarrow</strong> to help heal a broken heart</li>
               </ul>
             </div>
           </div>

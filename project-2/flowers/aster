@@ -3,14 +3,14 @@
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Lily - The Language of Flowers</title>
+      <title>Aster - The Language of Flowers</title>
       <link rel="stylesheet" href="../style.css">
     </head>
     <body>
       <main class="detail-layout">
 
         <h1><a class="site-title-link" href="../index.html">The Language of Flowers</a></h1>
-        <div class="subtitle">Lily</div>
+        <div class="subtitle">Aster</div>
         <div class="divider"></div>
         <nav class="seed-nav" aria-label="Project navigation">
           <a class="button-link" href="../garden.html" aria-current="page">Garden</a>
@@ -19,28 +19,27 @@
           <a class="button-link" href="../about.html">About</a>
         </nav>
 
-        <img class="specimen" src="../Lily.png" alt="Lily illustration">
+        <img class="specimen" src="../Aster.png" alt="Aster illustration">
 
-        <h2 class="detail-title">Lily</h2>
-        <div class="latin">Lilium</div>
-        <p class="definition">
-          Definition: A flower associated in floriography with purity.
+        <h2 class="detail-title">Aster</h2>
+        <div class="latin">Symphyotrichum</div>
+        <p class="definition victoria-definition">
+          <strong>Victoria's Definition:</strong> Patience
         </p>
 
-        <section class="label" aria-label="Lily details">
-          <div class="label-row">
-            <div class="label-key">Meaning</div>
+        <section class="label" aria-label="Aster details">
+          <div class="label-row meaning-row">
+            <div class="label-key"><strong>Meaning</strong></div>
             <div class="label-val">
-Purity
+Daintiness
             </div>
           </div>
 
           <div class="label-row">
             <div class="label-key">Origin</div>
             <div class="label-val">
-              In the Middle Ages, the lily became associated with the Virgin Mary. Paintings of the Annunciation,
-              the announcement by the archangel Gabriel to Mary that she would conceive and be the mother of Jesus,
-              often depict Gabriel giving the Blessed Virgin a lily, in honor of her purity.
+              The aster's association with daintiness most likely comes from its appearance. The many long and
+              slender petals delicately surround a bright, yellow center: a tiny masterpiece in a field of blooms.
             </div>
           </div>
 
@@ -48,8 +47,8 @@ Purity
             <div class="label-key">Pair With</div>
             <div class="label-val">
               <ul>
-                <li><strong>Orange Blossom</strong> for a wedding anniversary</li>
-                <li><strong>Sweet William</strong> to honor an act of pure generosity</li>
+                <li><strong>Daisy</strong> for a gift for a young girl</li>
+                <li><strong>Buttercup</strong> to compliment someone's charming demeanor</li>
               </ul>
             </div>
           </div>
