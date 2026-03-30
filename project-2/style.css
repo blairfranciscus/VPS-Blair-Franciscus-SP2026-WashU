@@ -415,7 +415,7 @@ a {
   position: relative;
   width: 0;
   max-width: 100%;
-  animation: title-type 3.6s steps(23, end) forwards;
+  animation: title-type 2.25s steps(23, end) forwards;
 }
 
 .landing-title::after {
@@ -428,8 +428,8 @@ a {
   background: currentColor;
   opacity: 1;
   animation:
-    title-caret 0.8s step-end infinite,
-    cursor-hide 0.01s linear forwards 3.6s;
+    title-caret 0.45s steps(1, end) infinite,
+    cursor-hide 0.01s linear forwards 2.25s;
 }
 
 .landing-divider {
@@ -446,7 +446,7 @@ a {
   display: inline-block;
   opacity: 0;
   animation: landing-fade 1.2s ease forwards;
-  animation-delay: 3.8s;
+  animation-delay: 2.45s;
 }
 
 .landing-flower {
@@ -497,14 +497,14 @@ a {
 
 .landing-type-line.meaning-primary {
   font-size: 15px;
-  --typing-delay: 4.7s;
+  --typing-delay: 3.15s;
 }
 
 .landing-explore {
   margin-top: 24px;
   opacity: 0;
   animation: landing-fade 0.8s ease forwards;
-  animation-delay: 5.95s;
+  animation-delay: 4.45s;
 }
 
 .landing-explore a {
