@@ -924,14 +924,17 @@ a {
 
 .note-card-front {
   align-items: center;
+  justify-content: center;
   text-align: center;
+  padding-top: 24px;
+  gap: 18px;
+  background: rgb(219, 202, 180);
 }
 
 .note-thumb {
   width: min(100%, 180px);
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  border: 1px solid var(--rule-soft);
   background: rgba(255, 250, 242, 0.7);
 }
 
@@ -957,11 +960,18 @@ a {
   padding-top: 8px;
 }
 
+.note-card-inside.note-card-form {
+  align-items: flex-start;
+  text-align: left;
+  padding-top: 28px;
+}
+
 .note-card-inside.note-card-centered {
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   text-align: center;
   gap: 18px;
+  padding-top: 0;
 }
 
 .note-line {
