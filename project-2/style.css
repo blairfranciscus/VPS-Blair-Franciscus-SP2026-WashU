@@ -428,7 +428,7 @@ a {
   background: currentColor;
   opacity: 1;
   animation:
-    title-caret 0.45s steps(1, end) infinite,
+    title-caret 0.45s steps(1, end) 5,
     cursor-hide 0.01s linear forwards 2.25s;
 }
 
@@ -844,6 +844,10 @@ a {
   font-family: "Courier Prime", "Courier New", monospace;
   font-size: 15px;
   line-height: 1.7;
+}
+
+.note-section-copy {
+  text-align: center;
 }
 
 .motivation-list {
