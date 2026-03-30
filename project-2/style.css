@@ -406,6 +406,7 @@ a {
 .landing-title {
   display: inline-block;
   margin: 0;
+  padding-right: 0.18em;
   white-space: nowrap;
   overflow: hidden;
   position: relative;
@@ -855,7 +856,6 @@ a {
   width: 100%;
   aspect-ratio: 3 / 4;
   object-fit: cover;
-  filter: grayscale(100%) contrast(1.05);
   border: 1px solid var(--rule-soft);
   margin: 0 0 14px;
   background: rgba(255, 250, 242, 0.7);
@@ -1068,7 +1068,7 @@ li {
   }
 
   to {
-    width: 26ch;
+    width: 27.4ch;
   }
 }
 
