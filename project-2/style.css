@@ -59,9 +59,11 @@ body {
 
 body.landing-body {
   min-height: 100vh;
-  padding: 32px 24px;
+  padding: 0 24px 32px;
   display: grid;
   place-items: center;
+  background: rgb(213, 193, 174);
+  background-image: none;
 }
 
 main {
@@ -71,11 +73,23 @@ main {
 
 h1 {
   font-family: "Bevola", "Cormorant Garamond", serif;
-  font-size: clamp(56px, 7vw, 88px);
+  font-size: clamp(34px, 5.8vw, 72px);
   font-weight: 500;
   margin: 0 0 12px;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.015em;
   text-align: center;
+  line-height: 1.05;
+  white-space: nowrap;
+}
+
+.site-title-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-title-link:hover,
+.site-title-link:focus-visible {
+  color: inherit;
 }
 
 h2 {
@@ -85,6 +99,14 @@ h2 {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   margin: 0 0 8px;
+}
+
+.keep-line {
+  white-space: nowrap;
+}
+
+.subline {
+  font-size: 0.76em;
 }
 
 p {
@@ -354,18 +376,20 @@ a {
 }
 
 .landing-shell {
-  max-width: 780px;
+  width: min(100%, 920px);
   margin: 0 auto;
   text-align: center;
   min-height: calc(100vh - 64px);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  transform: translateY(9vh);
 }
 
 .landing-title-wrap {
   display: inline-block;
-  margin-bottom: 28px;
+  margin-bottom: 12px;
 }
 
 .landing-title {
@@ -373,62 +397,113 @@ a {
   margin: 0;
   white-space: nowrap;
   overflow: hidden;
+  position: relative;
   width: 0;
-  border-right: 1px solid currentColor;
-  animation: title-type 2.8s steps(24, end) forwards, title-caret 0.8s step-end infinite;
+  animation: title-type 3.6s steps(23, end) forwards;
+}
+
+.landing-title::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 0.9em;
+  margin-left: 3px;
+  vertical-align: -0.08em;
+  background: currentColor;
+  opacity: 1;
+  animation:
+    title-caret 0.8s step-end infinite,
+    cursor-hide 0.01s linear forwards 3.6s;
 }
 
 .landing-divider {
   width: 120px;
   height: 1px;
   background: var(--rule);
-  margin: 0 auto 26px;
+  margin: 0 auto 18px;
   opacity: 0;
   animation: landing-fade 0.8s ease forwards;
-  animation-delay: 2.5s;
+  animation-delay: 3.1s;
 }
 
-.landing-note {
-  font-family: "Courier Prime", "Courier New", monospace;
-  font-size: 11px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin: 0 0 28px;
-  opacity: 0;
-  animation: landing-fade 0.8s ease forwards;
-  animation-delay: 2.7s;
-}
-
-.landing-flower-link {
+.landing-flower-wrap {
   display: inline-block;
-  text-decoration: none;
   opacity: 0;
-  transform: translateY(14px);
-  animation: landing-rise 1s ease forwards;
-  animation-delay: 3s;
-}
-
-.landing-flower-link:hover .landing-flower,
-.landing-flower-link:focus-visible .landing-flower {
-  transform: translateY(-4px) scale(1.02);
-  filter: grayscale(100%);
+  animation: landing-fade 1.2s ease forwards;
+  animation-delay: 3.8s;
 }
 
 .landing-flower {
   display: block;
-  width: min(42vw, 280px);
+  width: min(46vw, 340px);
   height: auto;
-  transition: transform 0.25s ease, filter 0.25s ease;
 }
 
-.landing-reveal {
+.landing-meaning {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.landing-type-line {
+  --typing-delay: 0s;
+  --typing-duration: 1.1s;
+  display: block;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  margin: 0 auto;
   font-family: "Courier Prime", "Courier New", monospace;
-  font-size: 11px;
-  letter-spacing: 0.16em;
+  color: var(--ink);
+  opacity: 0;
+  animation:
+    landing-line-fade 0.01s linear forwards var(--typing-delay),
+    landing-line-type var(--typing-duration) steps(18, end) forwards var(--typing-delay);
+}
+
+.landing-type-line::after {
+  content: "";
+  position: absolute;
+  top: 0.15em;
+  right: -3px;
+  width: 1px;
+  height: 0.95em;
+  background: currentColor;
+  opacity: 0;
+  animation:
+    title-caret 0.7s step-end infinite var(--typing-delay),
+    cursor-hide 0.01s linear forwards calc(var(--typing-delay) + var(--typing-duration));
+}
+
+.landing-type-line + .landing-type-line {
+  margin-top: 4px;
+}
+
+.landing-type-line.meaning-primary {
+  font-size: 15px;
+  --typing-delay: 4.7s;
+}
+
+.landing-explore {
+  margin-top: 24px;
+  opacity: 0;
+  animation: landing-fade 0.8s ease forwards;
+  animation-delay: 5.95s;
+}
+
+.landing-explore a {
+  font-family: "Courier Prime", "Courier New", monospace;
+  font-size: 12px;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--muted);
-  margin-top: 14px;
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+.landing-explore a:hover,
+.landing-explore a:focus-visible {
+  color: var(--ink);
 }
 
 .flower-card {
@@ -980,13 +1055,24 @@ li {
   }
 
   to {
-    width: 24ch;
+    width: 28ch;
   }
 }
 
 @keyframes title-caret {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
   50% {
-    border-color: transparent;
+    opacity: 0;
+  }
+}
+
+@keyframes cursor-hide {
+  to {
+    opacity: 0;
   }
 }
 
@@ -1000,15 +1086,19 @@ li {
   }
 }
 
-@keyframes landing-rise {
+@keyframes landing-line-fade {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes landing-line-type {
   from {
-    opacity: 0;
-    transform: translateY(14px);
+    width: 0;
   }
 
   to {
-    opacity: 1;
-    transform: translateY(0);
+    width: 100%;
   }
 }
 
@@ -1043,7 +1133,7 @@ li {
   }
 
   .landing-flower {
-    width: min(68vw, 240px);
+    width: min(70vw, 280px);
   }
 
   .label-row {
