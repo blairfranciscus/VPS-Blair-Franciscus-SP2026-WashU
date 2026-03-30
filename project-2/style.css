@@ -406,6 +406,10 @@ a {
   margin-bottom: 12px;
 }
 
+.landing-title-break {
+  display: none;
+}
+
 .landing-title {
   display: inline-block;
   margin: 0;
@@ -1566,6 +1570,19 @@ li {
 
   .landing-title {
     font-size: clamp(21px, 8vw, 34px);
+    white-space: normal;
+    width: auto;
+    overflow: visible;
+    padding-right: 0;
+    animation: landing-fade 0.9s ease forwards;
+  }
+
+  .landing-title::after {
+    content: none;
+  }
+
+  .landing-title-break {
+    display: block;
   }
 
   .landing-flower {
