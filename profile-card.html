@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blair — (Visual) Principles for Screen, Spring 2026, WashU</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://laurelschwulst.github.io/2026-spring-washu-vps/assets/css/profile.css"
+  />
+  <style>
+    html,
+    body {
+      background: #ffffff;
+      color: #0a2342;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      min-height: 100vh;
+      background-image: none;
+    }
+
+    .back-link {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
+      padding: 10px 14px;
+      border: 1px solid rgba(10, 35, 66, 0.16);
+      background: rgba(255, 255, 255, 0.92);
+      color: #0a2342;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+
+    .back-link:hover {
+      background: #f8f8f8;
+    }
+
+    .profile {
+      width: min(92vw, 640px);
+      border: 1px solid rgba(10, 35, 66, 0.16);
+      background: #fa8072;
+      box-shadow: 0 22px 70px rgba(3, 16, 32, 0.28);
+      border-radius: 18px;
+    }
+
+    .name-and-motto {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .aspect-ratio {
+      aspect-ratio: 1 / 1;
+      border-radius: 12px;
+      background: #0a2342;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(10, 35, 66, 0.1);
+    }
+
+    .aspect-ratio::before,
+    .aspect-ratio::after {
+      content: "";
+      display: none;
+    }
+
+    .aspect-ratio::before {
+      width: 0;
+      height: 0;
+    }
+
+    .aspect-ratio::after {
+      width: 0;
+      height: 0;
+    }
+
+    .profile-top div.name {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      line-height: 1.5;
+    }
+
+    .profile-top .motto {
+      max-width: 26ch;
+      color: rgba(10, 35, 66, 0.86);
+      font-size: 1.4rem;
+      line-height: 1.5;
+      text-wrap: balance;
+    }
+
+    .profile-bottom {
+      color: #0a2342;
+    }
+
+    .category {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: rgba(10, 35, 66, 0.78);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .selection,
+    .selection a {
+      color: #0a2342;
+      font-size: 1.4rem;
+      line-height: 1.5;
+    }
+
+    .selection a:hover {
+      color: rgba(10, 35, 66, 0.68);
+    }
+
+    details {
+      border-top: 1px solid rgba(10, 35, 66, 0.12);
+      padding-top: 8px;
+      margin-top: 10px;
+      font-size: 1.4rem;
+    }
+
+    summary {
+      cursor: pointer;
+      color: rgba(10, 35, 66, 0.88);
+      font-size: inherit;
+      font-weight: 400;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    ul {
+      margin-top: 8px;
+      padding-left: 18px;
+      font-size: 1.4rem;
+    }
+
+    li {
+      margin: 6px 0;
+      font-size: inherit;
+    }
+
+    .unicode-mark {
+      display: inline;
+      border: none;
+      font-size: 1.4rem;
+      line-height: 1.5;
+      background: transparent;
+      color: #0a2342;
+    }
+
+    .music-link {
+      display: inline-block;
+      font-size: 1.4rem;
+      font-weight: 400;
+      font-family: Georgia, "Times New Roman", serif;
+      text-decoration: none;
+    }
+
+    .outro {
+      color: rgba(10, 35, 66, 0.72);
+      font-size: 1.4rem;
+      letter-spacing: 0.03em;
+    }
+
+    @media (max-width: 720px) {
+      .aspect-ratio {
+        margin-bottom: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="back-link" href="index.html">&larr; Back to Atelier Franciscus</a>
+  <main>
+    <div class="profile">
+      <div class="profile-top">
+        <div class="aspect-ratio" aria-hidden="true"></div>
+        <div class="name-and-motto">
+          <div class="name">Blair</div>
+          <div class="motto">
+            Warm energy. Clear ambition. Always moving forward.
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-bottom">
+        <div class="category">Aspect ratio</div>
+        <div class="selection">1:1 — Square</div>
+
+        <div class="category">Color</div>
+        <div class="selection">Oxford Blue; Rosewater Clay</div>
+
+        <div class="category">Typeface</div>
+        <div class="selection">Georgia</div>
+
+        <div class="category">Unicode</div>
+        <div class="selection"><span class="unicode-mark" aria-label="Unicode symbol">⨔</span></div>
+
+        <div class="category">Music</div>
+        <div class="selection">
+          <a
+            class="music-link"
+            href="https://open.spotify.com/playlist/6OGG1HjM5v0qIPlrYbmGyI?si=d07d76b615a24785"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            goodmorning mix
+          </a>
+        </div>
+
+        <div class="category">Desert Island Lists</div>
+        <div class="selection">
+          <details>
+            <summary>Songs</summary>
+            <ul>
+              <li>Hey Hey Hey — Michael Franti &amp; Spearhead</li>
+              <li>Pink Skies — Zach Bryan</li>
+              <li>You Get What You Give — New Radicals</li>
+            </ul>
+          </details>
+          <details>
+            <summary>Books</summary>
+            <ul>
+              <li>The Language of Flowers</li>
+              <li>Tuesdays with Morrie</li>
+              <li>The Art of Racing in the Rain</li>
+            </ul>
+          </details>
+          <details>
+            <summary>Hobbies</summary>
+            <ul>
+              <li>Playing guitar</li>
+              <li>Teaching spin</li>
+              <li>Hiking</li>
+            </ul>
+          </details>
+        </div>
+
+        <div class="outro">Created on 01/12/2026 at 3:12 PM in Steinberg 6</div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
