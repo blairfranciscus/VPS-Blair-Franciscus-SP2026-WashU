@@ -1,222 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blair — (Visual) Principles for Screen, Spring 2026, WashU</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    rel="stylesheet"
-    href="https://laurelschwulst.github.io/2026-spring-washu-vps/assets/css/profile.css"
-  />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blair Profile Card</title>
   <style>
+    :root {
+      --page-bg: #f3f3f1;
+      --card-bg: #fa8072;
+      --ink: #0a2342;
+      --muted: rgba(10, 35, 66, 0.72);
+      --rule: #bdbdb7;
+      --swatch: #0a2342;
+      --link: #1d4f91;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     html,
     body {
-      background: #ffffff;
-      color: #0a2342;
+      min-height: 100%;
     }
 
     body {
+      margin: 0;
+      padding: 40px 18px;
+      display: grid;
+      place-items: center;
+      background: var(--page-bg);
+      color: var(--ink);
       font-family: Georgia, "Times New Roman", serif;
-      min-height: 100vh;
-      background-image: none;
+      line-height: 1.35;
     }
 
-    .back-link {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      z-index: 10;
-      padding: 10px 14px;
-      border: 1px solid rgba(10, 35, 66, 0.16);
-      background: rgba(255, 255, 255, 0.92);
-      color: #0a2342;
-      text-decoration: none;
-      letter-spacing: 0.04em;
+    a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 2px;
     }
 
-    .back-link:hover {
-      background: #f8f8f8;
+    /* Profile card shell */
+    .profile-card {
+      width: min(100%, 520px);
+      background: var(--card-bg);
+      border: 1px solid rgba(10, 35, 66, 0.2);
     }
 
-    .profile {
-      width: min(92vw, 640px);
-      border: 1px solid rgba(10, 35, 66, 0.16);
-      background: #fa8072;
-      box-shadow: 0 22px 70px rgba(3, 16, 32, 0.28);
-      border-radius: 18px;
+    /* Top identity section */
+    .profile-top {
+      display: grid;
+      grid-template-columns: 164px 1fr;
+      gap: 24px;
+      align-items: center;
+      padding: 28px;
     }
 
-    .name-and-motto {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 10px;
-    }
-
-    .aspect-ratio {
+    .color-swatch {
       aspect-ratio: 1 / 1;
-      border-radius: 12px;
-      background: #0a2342;
-      position: relative;
-      overflow: hidden;
-      border: 1px solid rgba(10, 35, 66, 0.1);
+      width: 100%;
+      background: var(--swatch);
+      border: 1px solid rgba(10, 35, 66, 0.2);
     }
 
-    .aspect-ratio::before,
-    .aspect-ratio::after {
-      content: "";
-      display: none;
+    .identity {
+      min-width: 0;
     }
 
-    .aspect-ratio::before {
-      width: 0;
-      height: 0;
+    .name {
+      margin: 0;
+      font-size: clamp(44px, 9vw, 72px);
+      font-weight: 400;
+      line-height: 0.95;
+      letter-spacing: -0.05em;
     }
 
-    .aspect-ratio::after {
-      width: 0;
-      height: 0;
+    .quote {
+      margin: 12px 0 0;
+      max-width: 24ch;
+      color: var(--muted);
+      font-size: 16px;
+      font-style: italic;
     }
 
-    .profile-top div.name {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.4rem;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      line-height: 1.5;
+    .divider {
+      height: 1px;
+      background: var(--rule);
     }
 
-    .profile-top .motto {
-      max-width: 26ch;
-      color: rgba(10, 35, 66, 0.86);
-      font-size: 1.4rem;
-      line-height: 1.5;
-      text-wrap: balance;
+    /* Two-column information table */
+    .info-table {
+      display: grid;
     }
 
-    .profile-bottom {
-      color: #0a2342;
+    .info-row {
+      display: grid;
+      grid-template-columns: 174px 1fr;
+      min-height: 48px;
+      border-bottom: 1px solid var(--rule);
     }
 
-    .category {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: rgba(10, 35, 66, 0.78);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+    .info-row:last-child {
+      border-bottom: 0;
     }
 
-    .selection,
-    .selection a {
-      color: #0a2342;
-      font-size: 1.4rem;
-      line-height: 1.5;
+    .label,
+    .value {
+      padding: 14px 18px;
+      font-size: 15px;
     }
 
-    .selection a:hover {
-      color: rgba(10, 35, 66, 0.68);
+    .label {
+      color: var(--muted);
+      border-right: 1px solid var(--rule);
     }
 
+    .value {
+      color: var(--ink);
+    }
+
+    /* Desert island disclosure lists */
     details {
-      border-top: 1px solid rgba(10, 35, 66, 0.12);
-      padding-top: 8px;
-      margin-top: 10px;
-      font-size: 1.4rem;
+      padding: 0;
+    }
+
+    details + details {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(31, 31, 29, 0.18);
     }
 
     summary {
       cursor: pointer;
-      color: rgba(10, 35, 66, 0.88);
-      font-size: inherit;
-      font-weight: 400;
-      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
     }
 
     ul {
-      margin-top: 8px;
+      margin: 10px 0 0;
       padding-left: 18px;
-      font-size: 1.4rem;
     }
 
     li {
-      margin: 6px 0;
-      font-size: inherit;
+      margin: 5px 0;
     }
 
-    .unicode-mark {
-      display: inline;
-      border: none;
-      font-size: 1.4rem;
-      line-height: 1.5;
-      background: transparent;
-      color: #0a2342;
+    /* Footer */
+    .footer {
+      padding: 16px 18px;
+      color: var(--muted);
+      font-family: "Courier New", Courier, monospace;
+      font-size: 12px;
+      letter-spacing: 0.02em;
     }
 
-    .music-link {
-      display: inline-block;
-      font-size: 1.4rem;
-      font-weight: 400;
-      font-family: Georgia, "Times New Roman", serif;
-      text-decoration: none;
-    }
+    @media (max-width: 560px) {
+      body {
+        padding: 22px 12px;
+      }
 
-    .outro {
-      color: rgba(10, 35, 66, 0.72);
-      font-size: 1.4rem;
-      letter-spacing: 0.03em;
-    }
+      .profile-top {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 20px;
+      }
 
-    @media (max-width: 720px) {
-      .aspect-ratio {
-        margin-bottom: 18px;
+      .color-swatch {
+        max-width: 180px;
+      }
+
+      .info-row {
+        grid-template-columns: 1fr;
+      }
+
+      .label {
+        border-right: 0;
+        border-bottom: 1px solid var(--rule);
+        padding-bottom: 8px;
+      }
+
+      .value {
+        padding-top: 10px;
       }
     }
   </style>
 </head>
 <body>
-  <a class="back-link" href="index.html">&larr; Back to Atelier Franciscus</a>
-  <main>
-    <div class="profile">
-      <div class="profile-top">
-        <div class="aspect-ratio" aria-hidden="true"></div>
-        <div class="name-and-motto">
-          <div class="name">Blair</div>
-          <div class="motto">
-            Warm energy. Clear ambition. Always moving forward.
-          </div>
+  <main class="profile-card" aria-label="Profile card">
+    <!-- Top section -->
+    <section class="profile-top" aria-label="Profile identity">
+      <div class="color-swatch" aria-label="Selected color swatch"></div>
+      <div class="identity">
+        <h1 class="name">Blair</h1>
+        <p class="quote">Warm energy. Clear ambition. Always moving forward.</p>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <!-- Information table section -->
+    <section class="info-table" aria-label="Profile details">
+      <div class="info-row">
+        <div class="label">Aspect ratio</div>
+        <div class="value">1:1 — Square</div>
+      </div>
+
+      <div class="info-row">
+        <div class="label">Color</div>
+        <div class="value">Oxford Blue; Rosewater Clay</div>
+      </div>
+
+      <div class="info-row">
+        <div class="label">Typeface</div>
+        <div class="value">Georgia</div>
+      </div>
+
+      <div class="info-row">
+        <div class="label">Unicode</div>
+        <div class="value">⨔</div>
+      </div>
+
+      <div class="info-row">
+        <div class="label">Music</div>
+        <div class="value">
+          <a href="https://open.spotify.com/playlist/6OGG1HjM5v0qIPlrYbmGyI?si=d07d76b615a24785">goodmorning mix</a>
         </div>
       </div>
 
-      <div class="profile-bottom">
-        <div class="category">Aspect ratio</div>
-        <div class="selection">1:1 — Square</div>
-
-        <div class="category">Color</div>
-        <div class="selection">Oxford Blue; Rosewater Clay</div>
-
-        <div class="category">Typeface</div>
-        <div class="selection">Georgia</div>
-
-        <div class="category">Unicode</div>
-        <div class="selection"><span class="unicode-mark" aria-label="Unicode symbol">⨔</span></div>
-
-        <div class="category">Music</div>
-        <div class="selection">
-          <a
-            class="music-link"
-            href="https://open.spotify.com/playlist/6OGG1HjM5v0qIPlrYbmGyI?si=d07d76b615a24785"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            goodmorning mix
-          </a>
-        </div>
-
-        <div class="category">Desert Island Lists</div>
-        <div class="selection">
+      <div class="info-row">
+        <div class="label">Desert Island Lists</div>
+        <div class="value">
           <details>
             <summary>Songs</summary>
             <ul>
@@ -225,6 +238,7 @@
               <li>You Get What You Give — New Radicals</li>
             </ul>
           </details>
+
           <details>
             <summary>Books</summary>
             <ul>
@@ -233,6 +247,7 @@
               <li>The Art of Racing in the Rain</li>
             </ul>
           </details>
+
           <details>
             <summary>Hobbies</summary>
             <ul>
@@ -242,10 +257,15 @@
             </ul>
           </details>
         </div>
-
-        <div class="outro">Created on 01/12/2026 at 3:12 PM in Steinberg 6</div>
       </div>
-    </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <!-- Bottom timestamp section -->
+    <footer class="footer">
+      Created on April 15 at 9:04 in Hillman 60
+    </footer>
   </main>
 </body>
 </html>
