@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap');
 
 :root{
-  --bg: #f6f6f4;
+  --bg: #E6DDC9;
   --text: #111111;
-  --muted: #5f5f5f;
+  --muted: #625b50;
   --lh1: 1.24;
 
-  --rule: #d9d1c9;
-  --rule-soft: #e9e2db;
+  --rule: #c7bba5;
+  --rule-soft: #d8cdb9;
 
   --accent: #7a8f7a;      /* sage */
   --accent-2: #b07a8e;    /* dusty rose */
@@ -55,7 +55,7 @@ body{
 }
 
 body.atelier-home{
-  background: #ffffff;
+  background: #E6DDC9;
 }
 
 
@@ -64,7 +64,10 @@ body.atelier-home{
   width: min(var(--col), var(--body-w-desktop), 100%);
   margin-left: auto;
   margin-right: auto;
-  z-index: 2;
+  z-index: 5;
+  padding: clamp(18px, 4vw, 36px);
+  background: rgba(230, 221, 201, 0.76);
+  backdrop-filter: blur(2px);
 }
 
 
@@ -85,7 +88,7 @@ body::before{
 }
 
 body.atelier-home::before{
-  opacity: .18;
+  opacity: .12;
 }
 
 body::after{
@@ -106,13 +109,13 @@ body::after{
 }
 
 body.atelier-home::after{
-  opacity: .08;
+  opacity: .10;
 }
 
 
 h1{
   font-family: "Playfair Display", serif;
-  font-size: clamp(52px, 7vw, 88px);
+  font-size: clamp(40px, 6vw, 88px);
   font-weight: 500;
   letter-spacing: -0.02em;
 
@@ -121,6 +124,7 @@ h1{
   margin: 0 auto;
 
   display: block;
+  white-space: nowrap;
 }
 
 p{
@@ -154,7 +158,120 @@ hr::after{
 }
 
 body.atelier-home hr::after{
-  background: #ffffff;
+  background: #E6DDC9;
+}
+
+.newspaper-frame{
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.frame-clipping{
+  position: fixed;
+  margin: 0;
+  background: #fffdf8;
+  border: 1px solid rgba(23, 23, 20, 0.18);
+  box-shadow: 0 18px 36px rgba(31, 25, 18, 0.18);
+  overflow: hidden;
+  pointer-events: auto;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, z-index 0.25s ease;
+}
+
+.frame-clipping::before{
+  content:"";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.22), transparent 28%, rgba(0,0,0,0.04) 100%);
+  mix-blend-mode: multiply;
+}
+
+.frame-clipping img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(1.08) sepia(0.22);
+}
+
+.frame-clipping:hover{
+  z-index: 10;
+  box-shadow: 0 24px 52px rgba(31, 25, 18, 0.22);
+}
+
+.frame-top-left{
+  left: -42px;
+  top: 22px;
+  width: clamp(130px, 18vw, 230px);
+  height: clamp(180px, 28vw, 330px);
+  transform: rotate(-8deg);
+}
+
+.frame-top-left:hover{
+  transform: rotate(-5deg) translate(8px, 4px);
+}
+
+.frame-top-right{
+  right: -48px;
+  top: 34px;
+  width: clamp(130px, 18vw, 230px);
+  height: clamp(178px, 26vw, 320px);
+  transform: rotate(7deg);
+}
+
+.frame-top-right:hover{
+  transform: rotate(4deg) translate(-8px, 4px);
+}
+
+.frame-mid-left{
+  left: -56px;
+  top: 42%;
+  width: clamp(120px, 16vw, 210px);
+  height: clamp(160px, 24vw, 290px);
+  transform: translateY(-50%) rotate(5deg);
+}
+
+.frame-mid-left:hover{
+  transform: translate(10px, -50%) rotate(3deg);
+}
+
+.frame-mid-right{
+  right: -58px;
+  top: 48%;
+  width: clamp(120px, 16vw, 210px);
+  height: clamp(160px, 24vw, 290px);
+  transform: translateY(-50%) rotate(-6deg);
+}
+
+.frame-mid-right:hover{
+  transform: translate(-10px, -50%) rotate(-3deg);
+}
+
+.frame-bottom-left{
+  left: 18px;
+  bottom: -58px;
+  width: clamp(135px, 20vw, 250px);
+  height: clamp(135px, 18vw, 230px);
+  transform: rotate(4deg);
+}
+
+.frame-bottom-left:hover{
+  transform: rotate(2deg) translateY(-10px);
+}
+
+.frame-bottom-right{
+  right: 18px;
+  bottom: -52px;
+  width: clamp(135px, 20vw, 250px);
+  height: clamp(135px, 18vw, 230px);
+  transform: rotate(-4deg);
+}
+
+.frame-bottom-right:hover{
+  transform: rotate(-2deg) translateY(-10px);
 }
 
 
@@ -251,6 +368,25 @@ li a::before{
   h2{ font-size: 24px; }
   li{ padding: 14px 2px; }
   ul{ width: 100%; }
+  .site-body{
+    width: min(92vw, 100%);
+    padding: 18px 14px;
+  }
+  .frame-clipping{
+    opacity: 0.42;
+  }
+  .frame-top-left,
+  .frame-top-right,
+  .frame-mid-left,
+  .frame-mid-right{
+    width: 98px;
+    height: 142px;
+  }
+  .frame-bottom-left,
+  .frame-bottom-right{
+    width: 112px;
+    height: 128px;
+  }
 }
 
 @media (max-width: 1024px) {
