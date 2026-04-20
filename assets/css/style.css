@@ -120,8 +120,6 @@ body.atelier-home::after{
   padding: clamp(22px, 3.2vw, 34px) clamp(8px, 2vw, 18px) clamp(20px, 2.8vw, 30px);
   border-top: 5px solid rgba(17, 17, 17, 0.84);
   border-bottom: 5px solid rgba(17, 17, 17, 0.84);
-  background:
-    linear-gradient(90deg, transparent 0 48%, rgba(17, 17, 17, 0.08) 48% 48.4%, transparent 48.4% 100%);
 }
 
 .atelier-masthead::before,
@@ -239,27 +237,29 @@ body.atelier-home hr::after{
 }
 
 .frame-top-left{
-  left: -42px;
-  top: 22px;
-  width: clamp(120px, 15vw, 210px);
-  height: clamp(150px, 22vw, 280px);
-  transform: rotate(-8deg);
+  left: -50px;
+  top: -42px;
+  width: clamp(135px, 17vw, 238px);
+  height: clamp(165px, 24vw, 306px);
+  transform: rotate(-9deg);
+  z-index: 3;
 }
 
 .frame-top-left:hover{
-  transform: rotate(-5deg) translate(8px, 4px);
+  transform: rotate(-6deg) translate(8px, 10px);
 }
 
 .frame-top-right{
-  right: -48px;
-  top: 34px;
-  width: clamp(120px, 15vw, 210px);
-  height: clamp(150px, 22vw, 280px);
-  transform: rotate(7deg);
+  right: -56px;
+  top: -36px;
+  width: clamp(135px, 17vw, 238px);
+  height: clamp(165px, 24vw, 306px);
+  transform: rotate(8deg);
+  z-index: 3;
 }
 
 .frame-top-right:hover{
-  transform: rotate(4deg) translate(-8px, 4px);
+  transform: rotate(5deg) translate(-8px, 10px);
 }
 
 .frame-mid-left{
@@ -336,7 +336,7 @@ body.atelier-home hr::after{
 
 .frame-left-upper-fill{
   left: -22px;
-  top: 14%;
+  top: 10%;
   width: clamp(82px, 9vw, 138px);
   height: clamp(96px, 12vw, 176px);
   transform: rotate(3deg);
@@ -349,7 +349,7 @@ body.atelier-home hr::after{
 
 .frame-right-upper-fill{
   right: -24px;
-  top: 16%;
+  top: 11%;
   width: clamp(82px, 9vw, 138px);
   height: clamp(96px, 12vw, 176px);
   transform: rotate(-4deg);
